@@ -52,6 +52,12 @@ include_once("components/navbar.php");
 <h1>J'EN PROFITE</h1>
 <div id="photos-promo">
 </div>
+<button>Voir nos offres du moment</button>
+
+<h1>NOS MEILLEURES VENTES</h1>
+<div id="photos-ventes">
+</div>
+<button>Voir nos meilleures ventes</button>
 <?php
 include_once("components/footer.php");
 ?>
