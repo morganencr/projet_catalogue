@@ -19,7 +19,7 @@ include_once("components/navbar.php");
       </div>
     </div>
     <div class="carousel-item active">
-      <img src="components/img/imgplaymobilbaniere.jpg" height="500px" class="d-block w-100" alt="Description of Image 2">
+      <img src="components/img/legobaniere.jpg" height="500px" class="d-block w-100" alt="Description of Image 2">
       <div class="container">
         <div class="carousel-caption">
           <h1>Another example headline.</h1>
@@ -29,7 +29,7 @@ include_once("components/navbar.php");
       </div>
     </div>
     <div class="carousel-item">
-      <img src="components/img/imgplaymobilbaniere.jpg" height="500px" class="d-block w-100" alt="Description of Image 3">
+      <img src="components/img/jeuxboisbaniere.png" height="500px" class="d-block w-100" alt="Description of Image 3">
       <div class="container">
         <div class="carousel-caption text-end">
           <h1>One more for good measure.</h1>
