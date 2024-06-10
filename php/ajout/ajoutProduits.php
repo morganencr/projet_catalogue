@@ -64,8 +64,28 @@ if(!empty($_POST)){
     </div>
     <div>
         <label for="categorie">Catégorie du produit</label>
+        <select name="categorie" id="categorie">
+            <option value="catégorie">Sélectionner une catégorie</option>
+            <option value="catégorie">Jeux de société</option>
+            <option value="catégorie">Activités créatives</option>
+            <option value="catégorie">jeux d'éveils</option>
+            <option value="catégorie">Jeux en bois</option>
+            <option value="catégorie">Jeux de construction</option>
+            <option value="catégorie">Jeux d'extérieurs</option>
+        </select>
     </div>
-
+    <div>
+        <label for="stock">Stock du produit</label>
+        <input type="number" name="stock" id="stock" required>
+    </div>
+    <div>
+        <label for="promo">promo</label>
+        <select name="promo" id="promo">
+            <option value="promo">Sélectionner</option>
+            <option value="promo">Oui</option>
+            <option value="promo">Non</option>
+        </select>
+    </div>
     <button type="submit">Envoyer</button>
 </form>
 
