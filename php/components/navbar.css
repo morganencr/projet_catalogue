@@ -1,0 +1,19 @@
+nav {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    background-color: yellow;
+}
+
+h1 {
+    width: 70%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+#logos-navbar {
+    display:flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
+}
