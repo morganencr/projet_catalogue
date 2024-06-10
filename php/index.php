@@ -48,7 +48,6 @@ include_once("components/navbar.php");
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
 <h1>J'EN PROFITE</h1>
 <div id="photos-promo">
 </div>
