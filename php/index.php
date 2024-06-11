@@ -29,7 +29,7 @@ include_once("components/navbar.php");
       </div>
     </div>
     <div class="carousel-item">
-      <img src="components/img/jeuxboisbaniere.png" height="500px" class="d-block w-100" alt="Description of Image 3">
+      <img src="components/img/jeuxboisbaniere.jpg" height="500px" class="d-block w-100" alt="Description of Image 3">
       <div class="container">
         <div class="carousel-caption text-end">
           <h1>Éveillez leurs sens avec nos jeux d'éveils en bois</h1>

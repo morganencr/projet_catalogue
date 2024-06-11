@@ -1,3 +1,15 @@
+/* HEADER / NAVBAR / CATEGORIES */
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
 nav {
     display:flex;
     justify-content: center;
@@ -6,6 +18,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: white;
 }
 
 nav h1 {
@@ -26,6 +39,7 @@ nav h1 {
     width:15%;
     justify-content: space-evenly;
     color:#8795de;
+    margin-top: 2%;
 }
 
 nav img {
@@ -62,6 +76,11 @@ form {
     border-radius: 10px;
     border: solid 0px grey;
     box-shadow: 1px 2px 10px 2px rgba(128, 128, 128, 0.5);
+}
+
+#searchbar input:focus {
+    border: none;
+    outline: none;
 }
 
 #searchbar button {
@@ -112,4 +131,36 @@ ul {
 
 li {
     list-style-type: none;
+}
+
+/* carousel */
+
+.w-100 {
+    object-fit: cover;
+}
+
+.carousel-caption h1 {
+    color: white;
+    text-shadow:2px 2px 5px black;
+}
+
+.carousel-caption p {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.opacity-75 {
+    opacity: 100 !important;
+}
+
+.btn {
+    background-color: #8795de;
+    border-color: #8795de;
+}
+
+/*FOOTER */
+
+.col-md-5 form {
+    display:flex;
+    flex-direction: column;
 }
