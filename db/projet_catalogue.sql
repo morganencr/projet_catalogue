@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le : lun. 10 juin 2024 à 11:43
+-- Généré le : mar. 11 juin 2024 à 11:41
 -- Version du serveur : 8.0.37
 -- Version de PHP : 8.2.8
 
@@ -47,10 +47,18 @@ CREATE TABLE `produits` (
 CREATE TABLE `users` (
   `id` int NOT NULL,
   `username` varchar(255) NOT NULL,
-  `email` varchar(25) NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`) VALUES
+(1, 'Morgane', 'morgane.encrenaz@gmail.com', '123456', 'superAdmin'),
+(2, 'Guillaume', 'guigui@gmail.com', 'azerty', 'admin');
 
 --
 -- Index pour les tables déchargées
@@ -82,7 +90,7 @@ ALTER TABLE `produits`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
