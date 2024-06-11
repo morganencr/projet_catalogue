@@ -54,8 +54,16 @@ if(!empty($_POST)){
 }
 include_once("components/navbar.php");
 ?>
-
-<h1>Connexion</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-signup.css">
+    <title>connexion</title>
+</head>
+<body>
+    <h1>Connexion</h1>
 <?php
 if(isset($_SESSION["error"])){
     foreach($_SESSION["error"] as $message){
@@ -78,5 +86,8 @@ if(isset($_SESSION["error"])){
     <button type="submit">Me connecter</button>
     <div><a href="inscription.php">Cliquez ici si vous n'êtes pas enregistré</a></div>
 </form>
+</body>
+</html>
+
 <?php
 include_once("components/footer.php");
