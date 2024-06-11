@@ -21,12 +21,12 @@
     <nav>
         <div id="navbar-items">
         <div id="logo-site">
-        <img src="./components/img/logo.site.png">
+        <a href="../index.php"><img src="./components/img/logo.site.png"></a>
         <h1>TOYS LAND</h1>
         </div>
         <div id="logos-navbar">
-        <a><i id="connexion" class="fa-solid fa-user fa-2x"></i></a>
-        <a><i id="panier" class="fa-solid fa-cart-shopping fa-2x"></i></a>
+        <a href="../connexion.php"><i id="connexion" class="fa-solid fa-user fa-2x"></i></a>
+        <a href="#"><i id="panier" class="fa-solid fa-cart-shopping fa-2x"></i></a>
         </div>
         </div>
         <form action="" method="get">

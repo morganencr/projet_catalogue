@@ -33,10 +33,14 @@ nav h1 {
     right:0;
     width:15%;
     justify-content: space-evenly;
-    color:#8795de;
     margin-top: 2%;
 }
-
+#logos-navbar a {
+    color: #8795de;
+}
+#logos-navbar a:hover {
+    color: #0B5ED7;
+}
 nav img {
     max-width: 60px;
 }
@@ -87,6 +91,9 @@ form {
 
 button .fa-solid {
     color: #8795de;
+}
+button .fa-solid:hover {
+    color: #0B5ED7;
 }
 
 .fa-solid {
