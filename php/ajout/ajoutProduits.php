@@ -104,12 +104,12 @@ if(!empty($_POST))
         <label for="categorie">Catégorie du produit</label>
         <select name="categorie" id="categorie">
             <option value="catégorie">Sélectionner une catégorie</option>
-            <option value="catégorie">Jeux de société</option>
-            <option value="catégorie">Activités créatives</option>
-            <option value="catégorie">Jeux d'éveils</option>
-            <option value="catégorie">Jeux en bois</option>
-            <option value="catégorie">Jeux de construction</option>
-            <option value="catégorie">Jeux d'extérieurs</option>
+            <option value="Jeux de société">Jeux de société</option>
+            <option value="Activité créative">Activité créative</option>
+            <option value="Jeu d'éveil">Jeu d'éveil</option>
+            <option value="Jeu en bois">Jeu en bois</option>
+            <option value="Jeu de construction">Jeu de construction</option>
+            <option value="Jeux d'extérieur">Jeu d'extérieur</option>
         </select>
     </div>
     <div>
@@ -120,8 +120,8 @@ if(!empty($_POST))
         <label for="promo">promo</label>
         <select name="promo" id="promo">
             <option value="promo">Sélectionner</option>
-            <option value="promo">Oui</option>
-            <option value="promo">Non</option>
+            <option value="Oui">Oui</option>
+            <option value="Non">Non</option>
         </select>
     </div>
     <button type="submit">Envoyer</button>
