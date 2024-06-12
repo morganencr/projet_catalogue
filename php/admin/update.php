@@ -3,10 +3,12 @@ if(!empty($_POST))
 {
 // si $_POST N'est pas vide, on vérifie que toutes les données sont présentes
 
-    if (isset($_POST["nom"], $_POST["description"], $_POST["prix"], $_POST["categorie"], $_POST["stock"], $_POST["promo"]) 
-    && !empty($_POST["nom"]) && !empty($_POST["description"]) && !empty($_POST["prix"]) && !empty($_POST["categorie"]) && !empty($_POST["stock"]) && !empty($_POST["promo"])) 
+    if (isset($_POST["nom"], $_POST["description"], $_POST["prix"], $_POST["categorie"], $_POST["stock"], $_POST["promo"], $_POST["id"])
+    && !empty($_POST["nom"]) && !empty($_POST["description"]) && !empty($_POST["prix"]) && !empty($_POST["categorie"]) && !empty($_POST["stock"]) && !empty($_POST["promo"]) && !empty($_POST["id"])) 
     {
+        // $id = strip_tags($_POST["id"]);
         // on retire toute balise du titre
+        $id = strip_tags($_POST["id"]);
         $nom = strip_tags($_POST["nom"]);
         // on neutralise toute balise du contenu (je les gardes mais elles ne sont plus active)
         $description = htmlspecialchars($_POST["description"]);
@@ -51,10 +53,11 @@ if(!empty($_POST))
                     require_once("../connect.php");
 
                     // Écrire la requête
-                    $sql = "UPDATE `produits` SET nom = :nom, description = :description, image = :image, prix = :prix, categorie = :categorie, stock = :stock, promo = :promo";
+                    $sql = "UPDATE `produits` SET nom = :nom, description = :description, image = :image, prix = :prix, categorie = :categorie, stock = :stock, promo = :promo WHERE id = :id";
                     $query = $db->prepare($sql);
 
                     // Lier les paramètres
+                    $query->bindValue("id", $id, PDO::PARAM_INT);
                     $query->bindValue(":nom", $nom, PDO::PARAM_STR);
                     $query->bindValue(":description", $description, PDO::PARAM_STR);
                     $query->bindValue(":image", $newfilename, PDO::PARAM_STR);
@@ -92,36 +95,37 @@ if(!empty($_POST))
         $query->bindValue(":id", $id, PDO::PARAM_INT); 
         $query->execute();
         
-        $stage = $query->fetch();
+        $produits = $query->fetch();
         
         } else {
-            header("Location : index.php");
+            header("Location: tableauProduits.php");
         }
         
 ?>
 
 <h1>Modifier un produit</h1>
  <!-- a partir du moment où on a un type file dans un formulaire il faut mettre un attribut spécifique "enctype" sur la balise form pour pouvoir envoyer les fichiers -->
-<form action="" method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data">
     <div>
+        <input type="hidden" name="id">
         <label for="nom">Nom du produit</label>
-        <input type="text" name="nom" id="nom" >
+        <input type="text" name="nom" id="nom" value="<?=$produits["nom"]?>">
     </div>
     <div>
         <label for="description">Descritpion du produit</label>
-        <textarea name="description" id="description"></textarea>
+        <textarea name="description" id="description" value="<?=$produits["description"]?>"></textarea>
     </div>
     <div>
         <label for="image">Image du produit</label>
-        <input type="file" name="image" id="image" required>
+        <input type="file" name="image" id="image" value="<?=$produits["image"]?>"required>
     </div>
     <div>
         <label for="prix">Prix du produit</label>
-        <input type="text" name="prix" id="prix" required>
+        <input type="text" name="prix" id="prix" value="<?=$produits["prix"]?>"required>
     </div>
     <div>
         <label for="categorie">Catégorie du produit</label>
-        <select name="categorie" id="categorie">
+        <select name="categorie" id="categorie" value="<?=$produits["categorie"]?>">
             <option value="catégorie">Sélectionner une catégorie</option>
             <option value="catégorie">Jeux de société</option>
             <option value="catégorie">Activités créatives</option>
@@ -133,11 +137,11 @@ if(!empty($_POST))
     </div>
     <div>
         <label for="stock">Stock du produit</label>
-        <input type="number" name="stock" id="stock" min="0" required>
+        <input type="number" name="stock" id="stock" min="0" value="<?=$produits["stock"]?>"required>
     </div>
     <div>
         <label for="promo">promo</label>
-        <select name="promo" id="promo">
+        <select name="promo" id="promo" value="<?=$produits["promo"]?>">
             <option value="promo">Sélectionner</option>
             <option value="promo">Oui</option>
             <option value="promo">Non</option>
