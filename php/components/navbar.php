@@ -20,7 +20,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <title>TOYS LAND</title>
 </head>
 <body>
-    <nav>
+    <nav >
         <div id="navbar-items">
         <div id="logo-site">
         <a href="../index.php"><img src="./components/img/logo.site.png"></a>
@@ -34,6 +34,8 @@ if (session_status() == PHP_SESSION_NONE) {
         <?php endif; ?>
         <a href="#"><i id="panier" class="fa-solid fa-cart-shopping fa-2x"></i></a>
         </div>
+        <div class="burger-menu" id="burger-menu">☰
+        </div>
         </div>
         <form action="" method="get">
         <div id="searchbar">
@@ -41,7 +43,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <button><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
         </div>
     </form>
-    <ul class="categories">
+    <ul class="categories"id="categories">
         <li><a href="jeuxdesociete.php">Jeux de société</a></li>
         <li><a href="activites-creatives.php">Activités créatives</a></li>
         <li><a href="jeuxeveils.php">Jeux d'éveils</a></li>
@@ -50,5 +52,31 @@ if (session_status() == PHP_SESSION_NONE) {
         <li><a href="jeuxexterieur.php">Jeux d'extérieurs</a></li>
     </ul>
     </nav>
+    <script>
+            // Fonction pour fermer le menu burger
+    function fermerMenuBurger() {
+        var burgerMenu = document.getElementById('burger-menu');
+        burgerMenu.classList.remove('active');
+    }
+            // fonction pour fermer le menu déroulant des catégories
+    function fermerMenuCategories() {
+        var categoriesMenu = document.getElementById('categories');
+        categoriesMenu.classList.remove('active');
+    }
+
+    // écouter l'événement de redimensionnement de la fenêtre
+    window.addEventListener('resize', function() {
+        // fermer le menu déroulant des catégories quand la taille de l'écran change
+        fermerMenuBurger();
+        fermerMenuCategories();
+    });
+        document.getElementById('burger-menu').addEventListener('click', function() {
+            var burgerMenu = document.getElementById('burger-menu');
+            burgerMenu.classList.toggle('active');
+
+            var categoriesMenu = document.getElementById('categories');
+            categoriesMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
