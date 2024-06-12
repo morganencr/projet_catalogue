@@ -79,36 +79,24 @@ if(!empty($_POST))
                 die("Le formulaire est incomplet.");
             }
         }
-
-        // if(isset($_GET["id"]) && !empty($_GET["id"])){
-
-
-
-        //     require_once("connect.php");
-            
-        //     //on affiche pas le nombre de l'id car sinon il y a un conflit au niveau de la redirection car il doit afficher plusieurs choses
-        //     // echo $_GET["id"];
-        //     $id = strip_tags($_GET["id"]);
-        //     $sql = "SELECT * FROM produits WHERE id = :id";
-        //     $query = $db->prepare($sql);
-        //     //on accroche la valeur id de la requête à celle de la variable $id
-        //     $query->bindValue(":id", $id, PDO::PARAM_INT);
-            
-        //     $query->execute();
-            
-        //     $candidatures = $query->fetch();
-            
-        //     //!$user = le ! c'est pour vérifier si l'utilisateur existe,le ! = c'est vide
-        //     if(!$produits){
-        //         header("Location: index.php");
-        //     }else{
-        //         require_once("disconnect.php");
-        //     }
-            
-        //     // print_r($user);
-        //     }else{
-        //         header("Location: index.php");
-        //     }
+        if (isset($_GET["id"])&& !empty($_GET["id"])){
+            // déja ça va vérifier si la var est défini avec isset et ensuite si il y a l'id dqns l'url
+        
+        require_once("../connect.php"); // ne pas oublier de connecter avec require_once
+        // echo $_GET["id"];
+        $id = strip_tags($_GET["id"]);
+        
+        $sql = "SELECT * FROM produits WHERE id = :id";
+        $query = $db->prepare($sql); // on prépare la requête, on demande la $db mais il faut la connecter avec require
+        // on accroche la valeur id de la requête à celle de la variable $id
+        $query->bindValue(":id", $id, PDO::PARAM_INT); 
+        $query->execute();
+        
+        $stage = $query->fetch();
+        
+        } else {
+            header("Location : index.php");
+        }
         
 ?>
 
