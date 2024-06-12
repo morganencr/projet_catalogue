@@ -164,13 +164,12 @@ button .fa-solid:hover {
 }
 
 .burger-menu.active {
-    transform: rotate(90deg); 
+    transform: rotate(90deg);
 }
 
 .burger-bar {
     width: 25px;
     height: 3px;
-    background-color: #333;
     margin: 4px 0;
 }
 
