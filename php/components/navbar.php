@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 ?>
 
@@ -25,7 +25,11 @@
         <h1>TOYS LAND</h1>
         </div>
         <div id="logos-navbar">
-        <a href="../connexion.php"><i id="connexion" class="fa-solid fa-user fa-2x"></i></a>
+        <?php if(!isset($_SESSION["user"])): ?>
+            <a href="../connexion.php"><i id="connexion" class="fa-solid fa-user fa-2x"></i></a>
+        <?php else : ?>
+            <a href="déconnexion.php"><i id = "connexion" class="fa-solid fa-right-from-bracket fa-2x"></i></a>
+        <?php endif; ?>
         <a href="#"><i id="panier" class="fa-solid fa-cart-shopping fa-2x"></i></a>
         </div>
         </div>

@@ -1,6 +1,12 @@
 <?php
 session_start();
 $_SESSION["error"] = [];
+
+if(isset($_SESSION["user"])){
+    header("Location: index.php");
+    exit;
+}
+
 // les conditions pour se connecter:
 if(!empty($_POST)){
     // Le formulaire a été envoyé 
@@ -10,7 +16,8 @@ if(!empty($_POST)){
     // d'abord on vérifie que l'email est un email:
         if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
             $_SESSION["error"][]="Ce n'est pas un email";
-        }
+        } else {
+
     // si c'est un email:
     // On va se connecter à la db 
     require_once("connect.php");
@@ -27,15 +34,14 @@ if(!empty($_POST)){
 
     if(!$user){
         $_SESSION["error"][]="l'utilisateur et/ou le mdp est incorrect";
-    }
+    } else {
 
     // Ici il y a un utilisateur existant, ça veut dire qu'on peut vérifier son mdp:
     // on va utliser une fonction: password_verify ça va demander 2 paramètres : le mdp tapé dans le formulaire et le hashe dans la base de donné
     // Donc avec password_verify on peut vérifier si le mdp correspond
-    if(!password_verify($_POST["pass"], $user["pass"])){
+    if(!password_verify($_POST["pass"], $user["password"])){
         $_SESSION["error"][]="l'utilisateur et/ou le mdp est incorrect";
-    }
-
+    } else {
     // ici l'utilisateur et le mot de passe sont corrects
         // on va donc pouvoir ouvrir la session ou "connecter l'utilisateur"
         // on initialise une superglobal($_SESSION) qui reste tjrs disponible tant qu'on ne ferme pas le navigateur; Elle ne sert pas qu'à connecter les utilisateurs, elle sert également pour stocker toute information qu'on souhaite passé d'une page à une autre
@@ -47,7 +53,11 @@ if(!empty($_POST)){
             "prenom" => $user['firstname'],
             "email" => $user['email'],
         ];
-    header("Location: profil.php");
+    header("Location: index.php");
+    exit;
+    }
+}
+}
     } else {
         $_SESSION["error"][]="le formulaire est incomplet";
     }
@@ -77,11 +87,11 @@ if(isset($_SESSION["error"])){
 <form method="post">
     <div>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required>
     </div>
     <div>
         <label for="pass">Mot de passe</label>
-    <input type="password" name="pass" id="pass">
+    <input type="password" name="pass" id="pass" required>
     </div>
     <button type="submit">Me connecter</button>
     <div><a href="inscription.php">Cliquez ici si vous n'êtes pas enregistré</a></div>
