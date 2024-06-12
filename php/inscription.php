@@ -81,12 +81,20 @@ if(isset($_SESSION["error"])){
     // Cette boucle là est standard on l'affiche partout où on veut afficher un message 
 }
 ?>
-<form method="post">
+<form id ="formulaire-inscription"method="post">
     <!-- j'enlève l'action du formulaire car je vais le traiter dans le même fichier -->
+     <div id="container-inscription">
+        <div id="colonne1">
     <div>
         <label for="firstname">Prénom</label>
         <input type="text" name="firstname" id="firstname" >
     </div>
+    <div>
+        <label for="pass">Mot de passe</label>
+        <input type="password" name="pass" id="pass">
+    </div>
+    </div>
+    <div id="colonne2">
     <div>
         <label for="name">Nom</label>
         <input type="text" name="name" id="name" >
@@ -95,11 +103,11 @@ if(isset($_SESSION["error"])){
         <label for="email">Email</label>
         <input type="email" name="email" id="email">
     </div>
-    <div>
-        <label for="pass">Mot de passe</label>
-    <input type="password" name="pass" id="pass">
     </div>
+    </div>
+    <div id="bouton-inscription">
     <button type="submit">M'inscrire</button>
+    </div>
 </form>
 </body>
 </html>

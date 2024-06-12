@@ -1,5 +1,8 @@
+/*CONNEXION*/
+
 h1 {
     text-align: center;
+    margin-top: 60px;
 }
 
 .formulaire-connexion {
@@ -27,4 +30,75 @@ h1 {
     display:flex;
     justify-content: center;
     margin-top:20px;
+    margin-bottom: 100px;
+}
+
+
+#email input:focus {
+    outline: none;
+}
+
+#mdp input:focus {
+    outline: none;
+}
+
+button {
+    background-color: #8795de;
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+button:hover {
+    background-color: #0B5ED7;
+}
+
+#inscription a:hover {
+    text-decoration: underline;
+}
+
+/* INSCRIPTION*/
+
+#formulaire-inscription {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+
+#container-inscription {
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin:auto;
+    height: 20vh;
+    width: 50%;
+    justify-content: space-around;
+}
+
+#container-inscription input {
+    outline: none;
+}
+
+#colonne1 {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 10vh;
+    justify-content: space-between;
+}
+
+#colonne2 {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 10vh;
+    justify-content: space-between;
+}
+#bouton-inscription {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 70px;
 }

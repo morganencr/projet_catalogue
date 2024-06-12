@@ -86,11 +86,11 @@ if(isset($_SESSION["error"])){
 ?>
 <form class="formulaire-connexion" method="post">
     <div id="container">
-    <div>
+    <div id="email">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
+        <input type="email" name="email" class="email" required>
     </div>
-    <div>
+    <div id="mdp">
         <label for="pass">Mot de passe</label>
     <input type="password" name="pass" id="pass" required>
     </div>
