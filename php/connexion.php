@@ -2,10 +2,10 @@
 session_start();
 $_SESSION["error"] = [];
 
-if(isset($_SESSION["user"])){
-    header("Location: index.php");
-    exit;
-}
+// if(isset($_SESSION["user"])){
+//     header("Location: index.php");
+//     exit;
+// }
 
 // les conditions pour se connecter:
 if(!empty($_POST)){

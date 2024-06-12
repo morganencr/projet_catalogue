@@ -66,7 +66,7 @@ if(!empty($_POST))
                         // Exécuter la requête et gérer les erreurs potentielles
                         if ($query->execute()) {
                             $id = $db->lastInsertId();
-                            header("Location: ../index.php");
+                            header("Location: tableauProduits.php");
                             exit();
                         } else {
                             die("Une erreur est survenue lors de l'ajout de l'article.");
@@ -80,7 +80,9 @@ if(!empty($_POST))
             }
         }
 ?>
-
+ <?php
+ include_once("../components/navbar.php");
+ ?>
 <h1>AJOUTER UN PRODUIT</h1>
  <!-- a partir du moment où on a un type file dans un formulaire il faut mettre un attribut spécifique "enctype" sur la balise form pour pouvoir envoyer les fichiers -->
 <form action="" method="post" enctype="multipart/form-data">
@@ -128,3 +130,4 @@ if(!empty($_POST))
 </form>
 
 <?php
+include_once("../components/footer.php");
