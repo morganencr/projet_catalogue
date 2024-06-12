@@ -59,6 +59,14 @@ if(!empty($_POST)){
 include_once("components/navbar.php");
 
 ?>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-signup.css">
+    <title>inscription</title>
+</head>
+<body>
 <h1>Inscription</h1>
 <?php
 // pour faire passer des informations des erreur directement au dessus du formulaire grâce à la basile p
@@ -93,6 +101,7 @@ if(isset($_SESSION["error"])){
     </div>
     <button type="submit">M'inscrire</button>
 </form>
-
+</body>
+</html>
 <?php
 include_once("components/footer.php");

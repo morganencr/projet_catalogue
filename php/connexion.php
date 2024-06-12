@@ -74,7 +74,8 @@ if(isset($_SESSION["error"])){
     unset($_SESSION["error"]);
 }
 ?>
-<form method="post">
+<form class="formulaire-connexion" method="post">
+    <div id="container">
     <div>
         <label for="email">Email</label>
         <input type="email" name="email" id="email">
@@ -83,9 +84,12 @@ if(isset($_SESSION["error"])){
         <label for="pass">Mot de passe</label>
     <input type="password" name="pass" id="pass">
     </div>
+    <div id="bouton">
     <button type="submit">Me connecter</button>
-    <div><a href="inscription.php">Cliquez ici si vous n'êtes pas enregistré</a></div>
+    </div>
+    </div>
 </form>
+<div id="inscription"><a href="inscription.php">Cliquez ici si vous n'êtes pas enregistré</a></div>
 </body>
 </html>
 
