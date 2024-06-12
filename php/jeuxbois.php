@@ -5,13 +5,32 @@ include_once("components/navbar.php");
 
 <h2>JEUX EN BOIS</h2>
 <div id="zone-description">
-    <p>Les jeux en bois pour enfants sont durables et écologiques. Ils favorisent le développement des compétences motrices et cognitives à travers 
-        des activités ludiques et éducatives. Leur design intemporel et naturel stimule l'imagination tout en offrant une alternative sûre 
-        et esthétique aux jouets en plastique.</p>
+    <p>Les jeux en bois pour enfants sont durables et écologiques. Ils favorisent le développement des compétences motrices et cognitives à travers des activités ludiques et éducatives. Leur design intemporel et naturel stimule l'imagination tout en offrant une alternative sûre et esthétique aux jouets en plastique.</p>
     <img src="components/img/jeuxbois.png">
 </div>
+<div class="main-container">
+    <div class="sort-container">
+        <div class="conteneur-tri">
 
-<div id="catalogue-produits">
+            <label for="price">Prix</label>
+            <input type="range" name="price" id="price" min="0" max="100">
+        </div>
+    </div>
+
+    <div class="article-container">
+        <div class="catalogue-produits">
+            <section>
+                <article>
+                    <img src="" alt="">
+                    <h3></h3>
+                    <p></p>
+                </article>
+            </section>
+        </div>
+    </div>
+
+</div>
+
     
 </div>
 
