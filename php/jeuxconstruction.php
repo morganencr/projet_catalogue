@@ -1,4 +1,18 @@
 <?php
+
+session_start();
+// on va chercher les articles dans la base
+// on se connecte à la base de donnée
+require_once("connect.php");
+
+// on écrit la requête
+$sql = "SELECT * FROM produits WHERE categorie ='Jeux de construction'";
+// Préparation de la requête
+$query = $db->prepare($sql);
+// Exécution de la requête
+$query->execute();
+// on récupère les données 
+$produits = $query->fetchALL(); // après un fecthALL il y a une boucle donc on doit rajouter un foreach
 include_once("components/navbar.php");
 ?>
 <link rel="stylesheet" href="pagejeux.css">
@@ -40,11 +54,19 @@ include_once("components/navbar.php");
 
         <div class="article-container">
             <section class="catalogue-produits">
+                <?php foreach($produits as $produit): ?>
                     <article>
-                        <img src="" alt="">
-                        <h3></h3>
-                        <p></p>
-                    </article>
+                    <?php 
+                // Ajouter "admin" au chemin de l'image
+                        $imagePath = $produit['image'];
+                        $class = 'admin/' . $imagePath;
+                        ?>
+                        <img id="img-article" src="<?= htmlspecialchars($class)?>" alt="photo article">
+                        <h3><?=strip_tags($produit["nom"])?></h3>
+                        <p><?=strip_tags($produit["prix"])?></p>
+                        <button>Ajouter au panier</button>
+                </article>
+                <?php endforeach;?>
             </section>
         </div>
     </div>
