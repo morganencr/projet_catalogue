@@ -25,7 +25,7 @@ include_once("components/navbar.php");
         <p>Les jeux en bois pour enfants sont durables et écologiques. Ils favorisent le développement des compétences motrices et cognitives à travers des activités ludiques et éducatives. Leur design intemporel et naturel stimule l'imagination tout en offrant une alternative sûre et esthétique aux jouets en plastique.</p>
         </div>    
         <div class="image-intro">
-            <img id="img-intro"src="components/img/jeuxbois.png">
+            <img id="img-intro"src="components/img/jeuxbois.jpg">
         </div>
     </div>
 
