@@ -1,11 +1,7 @@
 #section {
     padding: 10px 5%;
 }
-<<<<<<< HEAD
 section a:hover{
-=======
-#section a:hover{
->>>>>>> a84d487bca6a2e1a2b3d3dada17e176eba47934f
     text-decoration: underline;
 }
 
@@ -42,7 +38,6 @@ section a:hover{
 }
 .article-container{
     border: 2px solid red;
-<<<<<<< HEAD
     
 }
 .catalogue-produits{
@@ -61,7 +56,3 @@ article {
     height: 200px;
     width: 200px;
 }
-=======
-}
-
->>>>>>> a84d487bca6a2e1a2b3d3dada17e176eba47934f
