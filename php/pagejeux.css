@@ -37,7 +37,7 @@ section a:hover{
     grid-template-columns: 15% 85%;
 }
 .article-container{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     
 }
 .catalogue-produits{
@@ -46,7 +46,7 @@ section a:hover{
 }
 article {
     min-width: 400px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
     justify-content: center;
