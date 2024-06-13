@@ -25,7 +25,7 @@ include_once("components/navbar.php");
         <p>Les jeux d'extérieur pour enfants encouragent l'activité physique et l'exploration de la nature. Ils incluent balançoires, 
             toboggans, ballons et jeux de groupe, favorisant la coordination, la socialisation et la santé générale tout en offrant 
             des heures de divertissement en plein air.</p>
-        </div>    
+        </div>
         <div class="image-intro">
             <img id="img-intro"src="components/img/jeuxexterieur.jpg">
         </div>
