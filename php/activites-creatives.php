@@ -1,20 +1,53 @@
 <?php
 include_once("components/navbar.php");
 ?>
-<a href="index.php">Accueil</a>
+<link rel="stylesheet" href="pagejeux.css">
+<section id="section">
+    <a href="index.php">Accueil</a>
+    <div class="intro-container">
+        <div class="texte-description">
+            <h2> ACTIVITÉS CRÉATIVES</h2>
+            <p>Les jeux d'activités créatives pour enfants stimulent l'imagination et la motricité. 
+            Ils incluent le dessin, la peinture, le bricolage et la construction. Ces jeux favorisent l'expression personnelle et le développement des compétences cognitives et sociales tout en offrant un divertissement éducatif.</p>
+        </div>    
+        <div class="image-intro">
+            <img id="img-intro"src="components/img/activites-creatives.png">
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="sort-container">
+            <div class="conteneur-tri">
+                <div class="div-price">
+                    <label for="price">Prix</label>
+                    <input type="range" name="price" id="price" min="0" max="100">
+                </div>
+                <div class="div-color">
+                    <label for="bleu">bleu</label>
+                    <input type="checkbox" name="bleu" id="bleu">
+                    <label for="rouge">rouge</label>
+                    <input type="checkbox" name="rouge" id="rouge">
+                    <label for="vert">vert</label>
+                    <input type="checkbox" name="vert" id="vert">
+                    <label for="jaune">jaune</label>
+                    <input type="checkbox" name="jaune" id="jaune">
+                    <label for="noir">noir</label>
+                    <input type="checkbox" name="noir" id="noir">
 
-<h2> ACTIVITÉS CRÉATIVES</h2>
-<div id="zone-description">
-    <p>Les jeux d'activités créatives pour enfants stimulent l'imagination et la motricité. 
-    Ils incluent le dessin, la peinture, le bricolage et la construction. Ces jeux favorisent l'expression personnelle et le développement des 
-    compétences cognitives et sociales tout en offrant un divertissement éducatif.</p>
-    <img src="components/img/activites-creatives.png">
-</div>
+                </div>
+            </div>
+        </div>
 
-<div id="catalogue-produits">
-    
-</div>
-
+        <div class="article-container">
+            <section class="catalogue-produits">
+                    <article>
+                        <img src="" alt="">
+                        <h3></h3>
+                        <p></p>
+                    </article>
+            </dsection>
+        </div>
+    </div>
+</section>
 <?php
 include_once("components/footer.php");
 ?>
