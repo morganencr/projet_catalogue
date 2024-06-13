@@ -178,6 +178,7 @@ button .fa-solid:hover {
 }
 
 @media (max-width: 768px) {
+
     .burger-menu {
         display: flex;
         position: fixed;
@@ -187,13 +188,16 @@ button .fa-solid:hover {
     }
 
     .categories {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
         flex-direction: column;
-        transition: all 0.5s ease;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     }
 
     .categories.active {
-        display: flex;
+        max-height: 500px;
+        opacity: 1;
     }
 }
 
