@@ -24,7 +24,7 @@ include_once("components/navbar.php");
         <p>Les jeux de construction pour enfants stimulent la créativité et la pensée logique. 
             Ils incluent des blocs, briques et kits d'assemblage, permettant de créer diverses structures. Ces jeux développent 
             les compétences motrices fines, la résolution de problèmes et encouragent la patience et la concentration.</p>
-        </div>    
+        </div>   
         <div class="image-intro">
             <img id="img-intro"src="components/img/jeuxconstruction.jpg">
         </div>

@@ -6,18 +6,18 @@ h1 {
 }
 
 .formulaire-connexion {
-    width: 100%;
     height: 20vh;
     margin-top: 40px;
+    display:flex;
+    align-items:center;
+    flex-direction: column;
 }
 
 #container {
     display:flex;
     flex-direction: column;
-    margin-right: 80px;
-    justify-content: space-between;
     align-items: flex-end;
-    
+    width:200px;
 }
 
 #bouton {
@@ -50,6 +50,10 @@ button {
     color: white;
 }
 
+#bouton-inscription button {
+    width:40%;
+}
+
 button:hover {
     background-color: #0B5ED7;
 }
@@ -60,45 +64,43 @@ button:hover {
 
 /* INSCRIPTION*/
 
+
 #formulaire-inscription {
     display:flex;
     flex-direction: column;
     width:100%;
 }
-
+    
 #container-inscription {
     display:flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin:auto;
-    height: 20vh;
-    width: 50%;
-    justify-content: space-around;
+    flex-direction: column;
+    margin: auto;
+    width: 350px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    box-shadow: 1px 2px 30px 2px rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+    padding-top: 45px;
 }
 
 #container-inscription input {
     outline: none;
+    border:rgba(0, 0, 0, 0.466) solid 1px;
+    margin-bottom:15px;
 }
 
-#colonne1 {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-end;
-    height: 10vh;
-    justify-content: space-between;
+label {
+    width: 100%;
+    text-align: center;
 }
 
-#colonne2 {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-end;
-    height: 10vh;
-    justify-content: space-between;
-}
 #bouton-inscription {
     width:100%;
     display:flex;
     justify-content: center;
     margin-top: 40px;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
+
+

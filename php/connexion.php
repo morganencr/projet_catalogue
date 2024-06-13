@@ -73,7 +73,6 @@ include_once("components/navbar.php");
     <title>connexion</title>
 </head>
 <body>
-    <h1>Connexion</h1>
 <?php
 if(isset($_SESSION["error"])){
     foreach($_SESSION["error"] as $message){
@@ -85,6 +84,7 @@ if(isset($_SESSION["error"])){
 }
 ?>
 <form class="formulaire-connexion" method="post">
+<h1>Connexion</h1>
     <div id="container">
     <div id="email">
         <label for="email">Email</label>

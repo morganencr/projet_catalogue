@@ -67,7 +67,6 @@ include_once("components/navbar.php");
     <title>inscription</title>
 </head>
 <body>
-<h1>Inscription</h1>
 <?php
 // pour faire passer des informations des erreur directement au dessus du formulaire grâce à la basile p
 if(isset($_SESSION["error"])){
@@ -82,31 +81,28 @@ if(isset($_SESSION["error"])){
 }
 ?>
 <form id ="formulaire-inscription"method="post">
+<h1>Inscription</h1>
     <!-- j'enlève l'action du formulaire car je vais le traiter dans le même fichier -->
      <div id="container-inscription">
-        <div id="colonne1">
-    <div>
-        <label for="firstname">Prénom</label>
+    <div id="prenom">
+        <label for="firstname">Prénom</label><br>
         <input type="text" name="firstname" id="firstname" >
     </div>
-    <div>
-        <label for="pass">Mot de passe</label>
-        <input type="password" name="pass" id="pass">
-    </div>
-    </div>
-    <div id="colonne2">
-    <div>
-        <label for="name">Nom</label>
+    <div id="nom">
+        <label for="name">Nom</label><br>
         <input type="text" name="name" id="name" >
     </div>
-    <div>
-        <label for="email">Email</label>
+    <div id="mdp">
+        <label for="pass">Mot de passe</label><br>
+        <input type="password" name="pass" id="pass">
+    </div>
+    <div id="mail">
+        <label for="email">Email</label><br>
         <input type="email" name="email" id="email">
-    </div>
-    </div>
     </div>
     <div id="bouton-inscription">
     <button type="submit">M'inscrire</button>
+    </div>
     </div>
 </form>
 </body>
