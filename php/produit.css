@@ -1,0 +1,14 @@
+section {
+    padding: 10px 5%;
+}
+section a:hover{
+    text-decoration: underline;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.container-description{
+    background-color: rgb(204, 202, 202);
+}

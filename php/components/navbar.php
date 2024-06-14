@@ -50,6 +50,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <li><a href="jeuxbois.php">Jeux en bois</a></li>
         <li><a href="jeuxconstruction.php">Jeux de construction</a></li>
         <li><a href="jeuxexterieur.php">Jeux d'extérieurs</a></li>
+        <li><a style="color:red; font-weight:bold;" href="promos.php">Promos</a></li>
     </ul>
     </nav>
     <script>
