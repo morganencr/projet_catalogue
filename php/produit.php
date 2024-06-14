@@ -87,3 +87,10 @@ include_once("components/navbar.php");
 // on inclut le footer 
 include_once("components/footer.php");
 ?>
+
+1500
+700
+1799.99
+85
+129.99
+49.99

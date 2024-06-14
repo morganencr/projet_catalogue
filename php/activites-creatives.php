@@ -56,7 +56,7 @@ include_once("components/navbar.php");
         <div class="article-container">
             <section class="catalogue-produits">
                 <?php foreach($produits as $produit): ?>
-                    <article>
+                    <article><a href="produit.php?id=<?=$produit["id"]?>">
                     <?php 
                 // Ajouter "admin" au chemin de l'image
                         $imagePath = $produit['image'];
@@ -64,9 +64,9 @@ include_once("components/navbar.php");
                         ?>
                         <img id="img-article" src="<?= htmlspecialchars($class)?>" alt="photo article">
                         <h3><?=strip_tags($produit["nom"])?></h3>
-                        <p><?=strip_tags($produit["prix"])?></p>
+                        <p><?=strip_tags($produit["prix"])?>€</p>
                         <button>Ajouter au panier</button>
-                </article>
+                </a></article>
                 <?php endforeach;?>
             </section>
         </div>
