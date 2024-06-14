@@ -37,6 +37,8 @@ include_once("components/navbar.php");
                     <input type="range" name="price" id="price" min="0" max="100">
                 </div>
                 <div class="div-color">
+                    <div>Couleur :</div>
+                    <div class="checkbox">
                     <label for="bleu">bleu</label>
                     <input type="checkbox" name="bleu" id="bleu">
                     <label for="rouge">rouge</label>
@@ -47,7 +49,7 @@ include_once("components/navbar.php");
                     <input type="checkbox" name="jaune" id="jaune">
                     <label for="noir">noir</label>
                     <input type="checkbox" name="noir" id="noir">
-
+                    </div>
                 </div>
             </div>
         </div>

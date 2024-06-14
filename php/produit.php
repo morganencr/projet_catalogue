@@ -41,7 +41,7 @@ include_once("components/navbar.php");
 <link rel="stylesheet" href="produit.css">
 
 <section>
-    <a href="index.php">Accueil</a>
+    <a href="index.php">Accueil </a>/<a href="jeuxexterieur.php"> JEUX D'EXTÉRIEUR</a>
     <article> 
         <div class="img-container">
             <?php
