@@ -58,6 +58,7 @@ include_once("components/navbar.php");
                 <button>Retrait en magasin</button>
                 <button>Ajouter au panier</button>
                 <p>Il nous en reste <?=strip_tags($produit["stock"])?>  en magasin.</p>
+                
             </div>
         </div>
     </article>    

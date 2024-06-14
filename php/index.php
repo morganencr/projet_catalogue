@@ -48,28 +48,31 @@ include_once("components/navbar.php");
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div>
-  <ul>
-    <li><i class="fa-regular fa-credit-card"></i>Paiement 100% sécurisé</li>
-    <li><i class="fa-solid fa-shop"></i>Retrait en magasin gratuit</li>
-    <li><i class="fa-solid fa-gift"></i>Emballage cadeau gratuit</li>
-  </ul>
-</div>
-<div class="container-promos">
-  <h1>J'EN PROFITE</h1>
-  <div id="photos-promo">
-    <img src="components/img/promo1.png" alt="photo promos">
-    <img src="components/img/promo2.png" alt="photo promos">
-</div>
-</div>
+  <div id="nav-icones">
+    <ul>
+      <li><i class="fa-regular fa-credit-card fa-2x"></i>&nbsp;Paiement 100% sécurisé</li>
+      <li><i class="fa-solid fa-shop fa-2x"></i>Retrait en magasin gratuit</li>
+      <li><i class="fa-solid fa-gift fa-2x"></i>Emballage cadeau gratuit</li>
+    </ul>
+  </div>
+
+<section>
+  <div class="container-promos">
+    <h1>J'EN PROFITE</h1>
+    <div id="photos-promo">
+      <a href="promos.php"><img src="components/img/promo1.png" alt="photo promos"></a>
+      <a href="promos.php"><img src="components/img/promo2.png" alt="photo promos"></a>
+    </div>
+  </div>
 
 
-<button>Voir nos offres du moment</button>
+  <a id="btn-offre" href="promos.php"><button >Voir nos offres du moment</button></a>
 
-<h1>NOS MEILLEURES VENTES</h1>
-<div id="photos-ventes">
-</div>
-<button>Voir nos meilleures ventes</button>
+  <h1>NOS MEILLEURES VENTES</h1>
+  <div id="photos-ventes">
+  </div>
+  <button>Voir nos meilleures ventes</button>
+</section>
 <?php
 include_once("components/footer.php");
 ?>

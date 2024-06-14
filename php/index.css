@@ -266,6 +266,34 @@ li {
     border-color: #8795de;
 }
 
+section {
+    padding: 0 5%;
+}
+#nav-icones{
+    /* border: 2px solid red; */
+    background-color: #8795de;
+    padding: 10px 0 5px;
+}
+#nav-icones ul{
+    display: flex;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+.container-promos h1{
+    text-align: center;
+    padding: 25px 0;
+}
+#photos-promo{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+#photos-promo img{
+    max-width: 500px;
+}
+#btn-offre{
+    justify-content: center;
+}
 /*FOOTER */
 
 .col-md-5 form {
