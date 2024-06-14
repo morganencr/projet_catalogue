@@ -54,10 +54,12 @@ include_once("components/navbar.php");
         <div class="info-container">
             <div class="contenu-info">
                 <h1><?=strip_tags($produit["nom"])?></h1> 
-                <p><?=strip_tags($produit["prix"])?>€</p>
+                <p><?=strip_tags($produit["prix"])?></p>
+                <div class="options">
                 <button>Retrait en magasin</button>
                 <button>Ajouter au panier</button>
-                <p>Il nous en reste <?=strip_tags($produit["stock"])?>  en magasin.</p>
+                </div>
+                <p class="stock">Il nous en reste <?=strip_tags($produit["stock"])?>  en magasin.</p>
                 
             </div>
         </div>
@@ -74,7 +76,7 @@ include_once("components/navbar.php");
   
     <!--on voudrait avoir ça plusieurs fois donc on met la section avant le foreach et après le endforeach -->
 </section>
-<div>
+<div class="list">
   <ul>
     <li><i class="fa-regular fa-credit-card"></i>Paiement 100% sécurisé</li>
     <li><i class="fa-solid fa-shop"></i>Retrait en magasin gratuit</li>
