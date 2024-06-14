@@ -48,13 +48,13 @@ include_once("components/navbar.php");
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<nav>
+<div>
   <ul>
     <li><i class="fa-regular fa-credit-card"></i>Paiement 100% sécurisé</li>
     <li><i class="fa-solid fa-shop"></i>Retrait en magasin gratuit</li>
     <li><i class="fa-solid fa-gift"></i>Emballage cadeau gratuit</li>
   </ul>
-</nav>
+</div>
 <div class="container-promos">
   <h1>J'EN PROFITE</h1>
   <div id="photos-promo">
