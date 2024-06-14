@@ -31,6 +31,7 @@ include_once("components/navbar.php");
     <div class="main-container">
         <div class="sort-container">
             <div class="conteneur-tri">
+            <h5>Triez vos sélections :</h5>
                 <div class="div-price">
                     <label for="price">Prix</label>
                     <input type="range" name="price" id="price" min="0" max="2000">
@@ -64,7 +65,7 @@ include_once("components/navbar.php");
                         ?>
                         <img id="img-article" src="<?= htmlspecialchars($class)?>" alt="photo <?=strip_tags($produit["nom"])?>">
                         <h3><?=strip_tags($produit["nom"])?></h3>
-                        <p><?=strip_tags($produit["prix"])?></p>
+                        <p><strike><?=strip_tags($produit["prix"])?>€</strike>&nbsp;<?=strip_tags($produit["prix"])*0.8?>€</p>
                         <button>Ajouter au panier</button>
                 </a></article>
                 <?php endforeach;?>

@@ -54,7 +54,7 @@ include_once("components/navbar.php");
         <div class="info-container">
             <div class="contenu-info">
                 <h1><?=strip_tags($produit["nom"])?></h1> 
-                <p><?=strip_tags($produit["prix"])?></p>
+                <p><?=strip_tags($produit["prix"])?>€</p>
                 <button>Retrait en magasin</button>
                 <button>Ajouter au panier</button>
                 <p>Il nous en reste <?=strip_tags($produit["stock"])?>  en magasin.</p>
@@ -78,3 +78,10 @@ include_once("components/navbar.php");
 // on inclut le footer 
 include_once("components/footer.php");
 ?>
+
+1500
+700
+1799.99
+85
+129.99
+49.99

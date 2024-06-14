@@ -6,7 +6,7 @@ session_start();
 require_once("connect.php");
 
 // on écrit la requête
-$sql = "SELECT * FROM produits WHERE categorie ='Jeux de construction'";
+$sql = "SELECT * FROM produits WHERE categorie ='Jeu de construction'";
 // Préparation de la requête
 $query = $db->prepare($sql);
 // Exécution de la requête
@@ -16,6 +16,7 @@ $produits = $query->fetchALL(); // après un fecthALL il y a une boucle donc on 
 include_once("components/navbar.php");
 ?>
 <link rel="stylesheet" href="pagejeux.css">
+
 <section id="section">
     <a href="index.php">Accueil</a>
     <div class="intro-container">
@@ -57,7 +58,7 @@ include_once("components/navbar.php");
         <div class="article-container">
             <section class="catalogue-produits">
                 <?php foreach($produits as $produit): ?>
-                    <article>
+                    <article><a href="produit.php?id=<?=$produit["id"]?>">
                     <?php 
                 // Ajouter "admin" au chemin de l'image
                         $imagePath = $produit['image'];
@@ -65,9 +66,9 @@ include_once("components/navbar.php");
                         ?>
                         <img id="img-article" src="<?= htmlspecialchars($class)?>" alt="photo article">
                         <h3><?=strip_tags($produit["nom"])?></h3>
-                        <p><?=strip_tags($produit["prix"])?></p>
+                        <p><?=strip_tags($produit["prix"])?>€</p>
                         <button>Ajouter au panier</button>
-                </article>
+                </a></article>
                 <?php endforeach;?>
             </section>
         </div>

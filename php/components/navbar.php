@@ -27,6 +27,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <h1>TOYS LAND</h1>
         </div>
         <div id="logos-navbar">
+            <a href="admin/tableauProduits.php"><i id="connexion" class="fa-solid fa-gear fa-2x"></i></a>
         <?php if(!isset($_SESSION["user"])): ?>
             <a href="../connexion.php"><i id="connexion" class="fa-solid fa-user fa-2x"></i></a>
         <?php else : ?>
