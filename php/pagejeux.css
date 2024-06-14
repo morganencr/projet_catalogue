@@ -80,6 +80,12 @@ h5 {
     flex-wrap: wrap;
     gap: 15px;
 }
+
+.catalogue-produits article:hover{
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+}
+
 article {
     min-width: 300px;
     border: solid 0px rgba(128, 128, 128, 0.5);
