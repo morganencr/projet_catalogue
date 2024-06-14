@@ -65,7 +65,8 @@ include_once("components/navbar.php");
     <div class="container-description">
         <p>Description du produit:</p>
         <?=strip_tags($produit["description"])?>
-    </div>  
+    </div>
+    
         
         
         
@@ -73,7 +74,13 @@ include_once("components/navbar.php");
   
     <!--on voudrait avoir ça plusieurs fois donc on met la section avant le foreach et après le endforeach -->
 </section>
-  
+<div>
+  <ul>
+    <li><i class="fa-regular fa-credit-card"></i>Paiement 100% sécurisé</li>
+    <li><i class="fa-solid fa-shop"></i>Retrait en magasin gratuit</li>
+    <li><i class="fa-solid fa-gift"></i>Emballage cadeau gratuit</li>
+  </ul>
+</div>
 <?php
 // on inclut le footer 
 include_once("components/footer.php");
