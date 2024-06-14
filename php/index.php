@@ -48,9 +48,22 @@ include_once("components/navbar.php");
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<h1>J'EN PROFITE</h1>
-<div id="photos-promo">
+<nav>
+  <ul>
+    <li><i class="fa-regular fa-credit-card"></i>Paiement 100% sécurisé</li>
+    <li><i class="fa-solid fa-shop"></i>Retrait en magasin gratuit</li>
+    <li><i class="fa-solid fa-gift"></i>Emballage cadeau gratuit</li>
+  </ul>
+</nav>
+<div class="container-promos">
+  <h1>J'EN PROFITE</h1>
+  <div id="photos-promo">
+    <img src="components/img/promo1.png" alt="photo promos">
+    <img src="components/img/promo2.png" alt="photo promos">
 </div>
+</div>
+
+
 <button>Voir nos offres du moment</button>
 
 <h1>NOS MEILLEURES VENTES</h1>
