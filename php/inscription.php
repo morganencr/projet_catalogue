@@ -49,6 +49,7 @@ if(!empty($_POST)){
             "firstname" => $firstname,
             "name"=> $name,
             "email"=>$_POST["email"],
+            "role" => "utilisateur"
         ];
         // une fois que l'on a fait ça, on est connecté on peut donc redirigé vers la page d'acceuil'(par ex)
         header("Location: index.php");

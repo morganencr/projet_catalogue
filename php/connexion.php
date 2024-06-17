@@ -52,6 +52,7 @@ if(!empty($_POST)){
             "id" =>  $user["id"],
             "prenom" => $user['firstname'],
             "email" => $user['email'],
+            "role" => $user["role"]
         ];
     header("Location: index.php");
     exit;

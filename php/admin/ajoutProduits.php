@@ -1,4 +1,9 @@
 <?php
+ include_once("navbar2.php");
+ if (!isAdmin()) {
+    header("Location: ../index.php");
+    exit;
+}
 if(!empty($_POST))
 {
 // si $_POST N'est pas vide, on vérifie que toutes les données sont présentes
@@ -58,7 +63,7 @@ if(!empty($_POST))
                     $query->bindValue(":nom", $nom, PDO::PARAM_STR);
                     $query->bindValue(":description", $description, PDO::PARAM_STR);
                     $query->bindValue(":image", $newfilename, PDO::PARAM_STR);
-                    $query->bindValue(":prix",  $_POST["prix"], PDO::PARAM_STR);
+                    $query->bindValue(":prix",  $_POST["prix"], PDO::PARAM_INT);
                     $query->bindValue(":categorie", $_POST["categorie"], PDO::PARAM_STR);
                     $query->bindValue(":stock", $_POST["stock"], PDO::PARAM_INT);
                     $query->bindValue(":promo", $_POST["promo"], PDO::PARAM_STR);
@@ -81,7 +86,11 @@ if(!empty($_POST))
         }
 ?>
  <?php
- include_once("../components/navbar.php");
+ include_once("navbar2.php");
+ if (!isAdmin()) {
+    header("Location: ../index.php");
+    exit;
+}
  ?>
 <h1>AJOUTER UN PRODUIT</h1>
  <!-- a partir du moment où on a un type file dans un formulaire il faut mettre un attribut spécifique "enctype" sur la balise form pour pouvoir envoyer les fichiers -->

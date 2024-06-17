@@ -26,18 +26,18 @@ function isAdmin() {
     <nav >
         <div id="navbar-items">
         <div id="logo-site">
-        <a href="../index.php"><img src="./components/img/logo.site.png"></a>
+        <a href="../index.php"><img src="../components/img/logo.site.png"></a>
         <h1>TOYS LAND</h1>
         </div>
         <div id="logos-navbar">
             <?php if(isAdmin()):?>
-        <a href="admin/tableauProduits.php"><i id="connexion" class="fa-solid fa-gear fa-2x"></i></a>
+        <a href="tableauProduits.php"><i id="connexion" class="fa-solid fa-gear fa-2x"></i></a>
         <?php endif; ?>
            
         <?php if(!isset($_SESSION["user"])): ?>
             <a href="../connexion.php"><i id="connexion" class="fa-solid fa-user fa-2x"></i></a>
         <?php else : ?>
-            <a href="déconnexion.php"><i id = "connexion" class="fa-solid fa-right-from-bracket fa-2x"></i></a>
+            <a href="../déconnexion.php"><i id = "connexion" class="fa-solid fa-right-from-bracket fa-2x"></i></a>
         <?php endif; ?>
         <a href="#"><i id="panier" class="fa-solid fa-cart-shopping fa-2x"></i></a>
         </div>
@@ -51,13 +51,13 @@ function isAdmin() {
         </div>
     </form>
     <ul class="categories"id="categories">
-        <li><a href="jeuxdesociete.php">Jeux de société</a></li>
-        <li><a href="activites-creatives.php">Activités créatives</a></li>
-        <li><a href="jeuxeveils.php">Jeux d'éveils</a></li>
-        <li><a href="jeuxbois.php">Jeux en bois</a></li>
-        <li><a href="jeuxconstruction.php">Jeux de construction</a></li>
-        <li><a href="jeuxexterieur.php">Jeux d'extérieurs</a></li>
-        <li><a style="color:red; font-weight:bold;" href="promos.php">Promos</a></li>
+        <li><a href="../jeuxdesociete.php">Jeux de société</a></li>
+        <li><a href="../activites-creatives.php">Activités créatives</a></li>
+        <li><a href="../jeuxeveils.php">Jeux d'éveils</a></li>
+        <li><a href="../jeuxbois.php">Jeux en bois</a></li>
+        <li><a href="../jeuxconstruction.php">Jeux de construction</a></li>
+        <li><a href="../jeuxexterieur.php">Jeux d'extérieurs</a></li>
+        <li><a style="color:red; font-weight:bold;" href="../promos.php">Promos</a></li>
     </ul>
     </nav>
     <script>
