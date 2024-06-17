@@ -66,7 +66,7 @@ include_once("components/navbar.php");
                         <h3><?=strip_tags($produit["nom"])?></h3>
                         <p><?=strip_tags($produit["prix"])?>€</p>
                         <button>Ajouter au panier</button>
-                </a></article>
+                    </a></article>
                 <?php endforeach;?>
             </section>
         </div>

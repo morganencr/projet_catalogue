@@ -83,13 +83,13 @@ $produits = $query->fetchAll(PDO::FETCH_ASSOC);
     <h1>NOS MEILLEURES VENTES</h1>
     <section class="catalogue-produits">
         <?php foreach($produits as $produit): ?>
-        <article><a href="produit.php?id=<?=$produit["id"]?>">
+        <article id="article-index"><a href="produit.php?id=<?=$produit["id"]?>">
           <?php 
                 // Ajouter "admin" au chemin de l'image
                         $imagePath = $produit['image'];
                         $class = 'admin/' . $imagePath;
                         ?>
-                        <img id="img-article" src="<?= htmlspecialchars($class)?>" alt="photo article">
+                        <img id="img-articleIndex" src="<?= htmlspecialchars($class)?>" alt="photo article">
                         <h3><?=strip_tags($produit["nom"])?></h3>
                         <p><?=strip_tags($produit["prix"])?>€</p>
                         <button>Ajouter au panier</button>
