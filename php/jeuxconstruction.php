@@ -6,7 +6,7 @@ session_start();
 require_once("connect.php");
 
 // on écrit la requête
-$sql = "SELECT * FROM produits WHERE categorie ='Jeu de construction'";
+$sql = "SELECT * FROM produits WHERE categorie ='Jeux de construction'";
 // Préparation de la requête
 $query = $db->prepare($sql);
 // Exécution de la requête
