@@ -2,6 +2,9 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+function isAdmin() {
+    return isset($_SESSION["user"]) && $_SESSION["user"]["role"] === 'admin';
+}
 
 ?>
 
@@ -27,7 +30,10 @@ if (session_status() == PHP_SESSION_NONE) {
         <h1>TOYS LAND</h1>
         </div>
         <div id="logos-navbar">
-            <a href="admin/tableauProduits.php"><i id="connexion" class="fa-solid fa-gear fa-2x"></i></a>
+            <?php if(isAdmin()):?>
+        <a href="admin/tableauProduits.php"><i id="connexion" class="fa-solid fa-gear fa-2x"></i></a>
+        <?php endif; ?>
+           
         <?php if(!isset($_SESSION["user"])): ?>
             <a href="../connexion.php"><i id="connexion" class="fa-solid fa-user fa-2x"></i></a>
         <?php else : ?>

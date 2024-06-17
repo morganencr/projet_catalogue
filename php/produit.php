@@ -41,8 +41,7 @@ include_once("components/navbar.php");
 <link rel="stylesheet" href="produit.css">
 
 <section>
-    <a href="index.php">Accueil </a>
-    <!-- /<a href="jeuxexterieur.php"> JEUX D'EXTÉRIEUR</a> -->
+    <a href="index.php">Accueil </a>/<a href="jeuxexterieur.php"> JEUX D'EXTÉRIEUR</a>
     <article> 
         <div class="img-container">
             <?php
@@ -55,7 +54,7 @@ include_once("components/navbar.php");
         <div class="info-container">
             <div class="contenu-info">
                 <h1><?=strip_tags($produit["nom"])?></h1> 
-                <p><?=strip_tags($produit["prix"])?></p>
+                <p><?=strip_tags($produit["prix"])?>€</p>
                 <div class="options">
                 <button>Retrait en magasin</button>
                 <button>Ajouter au panier</button>

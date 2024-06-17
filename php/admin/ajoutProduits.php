@@ -1,4 +1,11 @@
 <?php
+function isAdmin() {
+    return isset($_SESSION["user"]) && $_SESSION["user"]["role"] === 'admin';
+}
+if (!isAdmin()) {
+    header("Location: ../index.php");
+    exit;
+}
 if(!empty($_POST))
 {
 // si $_POST N'est pas vide, on vérifie que toutes les données sont présentes
@@ -58,7 +65,7 @@ if(!empty($_POST))
                     $query->bindValue(":nom", $nom, PDO::PARAM_STR);
                     $query->bindValue(":description", $description, PDO::PARAM_STR);
                     $query->bindValue(":image", $newfilename, PDO::PARAM_STR);
-                    $query->bindValue(":prix",  $_POST["prix"], PDO::PARAM_STR);
+                    $query->bindValue(":prix",  $_POST["prix"], PDO::PARAM_INT);
                     $query->bindValue(":categorie", $_POST["categorie"], PDO::PARAM_STR);
                     $query->bindValue(":stock", $_POST["stock"], PDO::PARAM_INT);
                     $query->bindValue(":promo", $_POST["promo"], PDO::PARAM_STR);
