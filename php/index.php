@@ -1,5 +1,16 @@
 <?php
 include_once("components/navbar.php");
+require_once("connect.php");
+
+// Écrire la requête pour sélectionner les 6 produits avec le stock le plus bas
+$sql = "SELECT * FROM produits ORDER BY stock ASC LIMIT 6";
+$query = $db->prepare($sql);
+
+// Exécuter la requête
+$query->execute();
+
+// Récupérer les résultats
+$produits = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -69,41 +80,23 @@ include_once("components/navbar.php");
   <a id="btn-offre" href="promos.php"><button >Voir nos offres du moment</button></a>
 
   <div id="container-ventes">
-  <h1>NOS MEILLEURES VENTES</h1>
-  <div id="photos-ventes">
-    <div class="row1">
-    <div id="activitescreatives">
-    <a href="activites-creatives.php"><img src="components/img/vente1.jpg" alt="photo meilleures ventes"></a>
-    <p>Magic Sand - 35€</p>
-    </div>
-    <div id="jeuxsociete">
-    <a href="jeuxdesociete.php"><img src="components/img/vente2.png" alt="photo meilleures ventes"></a>
-    <p>Chass'Taupes - 25€</p>
-    </div>
-    <div id="jeuxbois">
-    <a href="jeuxbois.php"><img src="components/img/vente3.png" alt="photo meilleures ventes"></a>
-    <p>Boîte à outils - 28.99€</p>
-    </div>
-    </div>
-    <div class="row2">
-    <div id="jeuxext1">
-    <a href="jeuxexterieur.php"><img src="components/img/vente4.png" alt="photo meilleures ventes"></a>
-    <p>Toboggan - 700€</p>
-    </div>
-    <div id="jeuxext2">
-    <a href="jeuxexterieur.php"><img src="components/img/vente5.jpg" alt="photo meilleures ventes"></a>
-    <p>Balançoire - 1500€</p>
-    </div>
-    <div id="jeuxconstruction">
-    <a href="jeuxconstruction.php"><img src="components/img/vente6.jpg" alt="photo meilleures ventes"></a>
-    <p>Super Mario LEGO - 55€</p>
-    </div>
-    </div>
-  </div>
-  </div>
-  <div id="div-btn-ventes">
-  <button id="btn-ventes">Voir nos meilleures ventes</button>
-  </div>
+    <h1>NOS MEILLEURES VENTES</h1>
+    <section class="catalogue-produits">
+        <?php foreach($produits as $produit): ?>
+        <article><a href="produit.php?id=<?=$produit["id"]?>">
+          <?php 
+                // Ajouter "admin" au chemin de l'image
+                        $imagePath = $produit['image'];
+                        $class = 'admin/' . $imagePath;
+                        ?>
+                        <img id="img-article" src="<?= htmlspecialchars($class)?>" alt="photo article">
+                        <h3><?=strip_tags($produit["nom"])?></h3>
+                        <p><?=strip_tags($produit["prix"])?>€</p>
+                        <button>Ajouter au panier</button>
+                </a></article>
+                <?php endforeach;?>
+            </section>
+  
 </section>
 <?php
 include_once("components/footer.php");

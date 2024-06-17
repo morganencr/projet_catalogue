@@ -69,12 +69,6 @@ include_once("components/navbar.php");
         <?=strip_tags($produit["description"])?>
     </div>
     
-        
-        
-        
-       
-  
-    <!--on voudrait avoir ça plusieurs fois donc on met la section avant le foreach et après le endforeach -->
 </section>
 <div class="list">
   <ul>
@@ -88,9 +82,4 @@ include_once("components/navbar.php");
 include_once("components/footer.php");
 ?>
 
-1500
-700
-1799.99
-85
-129.99
-49.99
+
