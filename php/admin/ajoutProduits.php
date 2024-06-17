@@ -1,8 +1,6 @@
 <?php
-function isAdmin() {
-    return isset($_SESSION["user"]) && $_SESSION["user"]["role"] === 'admin';
-}
-if (!isAdmin()) {
+ include_once("navbar2.php");
+ if (!isAdmin()) {
     header("Location: ../index.php");
     exit;
 }
@@ -88,7 +86,11 @@ if(!empty($_POST))
         }
 ?>
  <?php
- include_once("../components/navbar.php");
+ include_once("navbar2.php");
+ if (!isAdmin()) {
+    header("Location: ../index.php");
+    exit;
+}
  ?>
 <h1>AJOUTER UN PRODUIT</h1>
  <!-- a partir du moment où on a un type file dans un formulaire il faut mettre un attribut spécifique "enctype" sur la balise form pour pouvoir envoyer les fichiers -->

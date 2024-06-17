@@ -1,12 +1,7 @@
 <?php
 session_start();
-function isAdmin() {
-    return isset($_SESSION["user"]) && $_SESSION["user"]["role"] === 'admin';
-}
-if (!isAdmin()) {
-    header("Location: ../index.php");
-    exit;
-}
+
+
 require_once("../connect.php");
 $sql = "SELECT * FROM produits ORDER BY categorie";
 
@@ -14,7 +9,11 @@ $query = $db->prepare($sql);
 
 $query->execute();
 $produits = $query-> fetchAll(PDO::FETCH_ASSOC);
-include_once("../components/navbar.php");
+include_once("navbar2.php");
+if (!isAdmin()) {
+    header("Location: ../index.php");
+    exit;
+}
 ?>
 
 <h1>Tableau des produits</h1>
