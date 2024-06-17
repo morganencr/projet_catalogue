@@ -81,7 +81,7 @@ include_once("components/navbar.php");
   <ul>
     <li><i class="fa-regular fa-credit-card"></i>Paiement 100% sécurisé</li>
     <li><i class="fa-solid fa-shop"></i>Retrait en magasin gratuit</li>
-    <li><i class="fa-solid fa-gift"></i>Emballage cadeau gratuit</li>
+    <li><i class="kdo fa-solid fa-gift"></i>Emballage cadeau gratuit</li>
   </ul>
 </div>
 <?php

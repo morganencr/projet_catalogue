@@ -52,7 +52,7 @@ include_once("components/navbar.php");
     <ul>
       <li><i class="fa-regular fa-credit-card fa-2x"></i>&nbsp;Paiement 100% sécurisé</li>
       <li><i class="fa-solid fa-shop fa-2x"></i>Retrait en magasin gratuit</li>
-      <li><i class="fa-solid fa-gift fa-2x"></i>Emballage cadeau gratuit</li>
+      <li><i class="kdo fa-solid fa-gift fa-2x"></i>Emballage cadeau gratuit</li>
     </ul>
   </div>
 
@@ -62,16 +62,48 @@ include_once("components/navbar.php");
     <div id="photos-promo">
       <a href="promos.php"><img src="components/img/promo1.png" alt="photo promos"></a>
       <a href="promos.php"><img src="components/img/promo2.png" alt="photo promos"></a>
+      <a href="promos.php"><img src="components/img/promo3.png" alt="photo promos"></a>
+      <a href="promos.php"><img src="components/img/promo4.png" alt="photo promos"></a>
     </div>
   </div>
-
-
   <a id="btn-offre" href="promos.php"><button >Voir nos offres du moment</button></a>
 
+  <div id="container-ventes">
   <h1>NOS MEILLEURES VENTES</h1>
   <div id="photos-ventes">
+    <div class="row1">
+    <div id="activitescreatives">
+    <a href="activites-creatives.php"><img src="components/img/vente1.jpg" alt="photo meilleures ventes"></a>
+    <p>Magic Sand - 35€</p>
+    </div>
+    <div id="jeuxsociete">
+    <a href="jeuxdesociete.php"><img src="components/img/vente2.png" alt="photo meilleures ventes"></a>
+    <p>Chass'Taupes - 25€</p>
+    </div>
+    <div id="jeuxbois">
+    <a href="jeuxbois.php"><img src="components/img/vente3.png" alt="photo meilleures ventes"></a>
+    <p>Boîte à outils - 28.99€</p>
+    </div>
+    </div>
+    <div class="row2">
+    <div id="jeuxext1">
+    <a href="jeuxexterieur.php"><img src="components/img/vente4.png" alt="photo meilleures ventes"></a>
+    <p>Toboggan - 700€</p>
+    </div>
+    <div id="jeuxext2">
+    <a href="jeuxexterieur.php"><img src="components/img/vente5.jpg" alt="photo meilleures ventes"></a>
+    <p>Balançoire - 1500€</p>
+    </div>
+    <div id="jeuxconstruction">
+    <a href="jeuxconstruction.php"><img src="components/img/vente6.jpg" alt="photo meilleures ventes"></a>
+    <p>Super Mario LEGO - 55€</p>
+    </div>
+    </div>
   </div>
-  <button>Voir nos meilleures ventes</button>
+  </div>
+  <div id="div-btn-ventes">
+  <button id="btn-ventes">Voir nos meilleures ventes</button>
+  </div>
 </section>
 <?php
 include_once("components/footer.php");

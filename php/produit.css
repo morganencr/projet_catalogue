@@ -67,11 +67,30 @@ h1 {
 .list ul {
     margin-top:50px;
     margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .list {
     background-color: rgb(135, 149, 222, 0.5);
 
+}
+
+.list .fa-solid {
+    width:32px;
+    font-size: 1.5em;
+}
+
+.list .fa-regular {
+    font-size: 1.5em;
+}
+
+.list .kdo {
+    width:27px;
+}
+
+.list li {
+    display:flex;
 }
 
 .options button {
