@@ -325,6 +325,10 @@ section {
     background-color:#0B5ED7;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+#container-ventes h1 {
+    text-align: center;
+    padding-bottom: 35px;
+}
 .catalogue-produits{
     display: flex;
     flex-wrap: wrap;
