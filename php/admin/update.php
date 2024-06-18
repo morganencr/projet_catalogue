@@ -136,8 +136,8 @@ if(!empty($_POST))
             <option value="Jeux de société">Jeux de société</option>
             <option value="Activité créative">Activités créatives</option>
             <option value="Jeux d'éveil">Jeux d'éveils</option>
-            <option value="Jeu en bois">Jeux en bois</option>
-            <option value="Jeux de construction">Jeux de construction</option>
+            <option value="Jeu en bois">Jeu en bois</option>
+            <option value="Jeu de construction">Jeu de construction</option>
             <option value="Jeux d'extérieur">Jeux d'extérieurs</option>
         </select>
     </div>
