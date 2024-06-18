@@ -21,23 +21,28 @@ include_once("components/navbar.php");
     <div class="intro-container">
         <div class="texte-description">
         <h2>PROMOS</h2>
-        <p></p>
+        <p>Découvrez notre sélection de jouets en promotion ! Profitez de réductions incroyables sur une variété de jeux pour tous les âges. 
+            Faites plaisir à vos enfants sans vous ruiner avec nos offres spéciales sur des jouets éducatifs, créatifs et amusants. 
+            Ne manquez pas ces opportunités uniques !</p>
         </div>
         <div class="image-intro">
             <img id="img-intro"src="components/img/promo3.png">
         </div>
+        
     </div>
 
     <div class="main-container">
         <div class="sort-container">
-            <div class="conteneur-tri">
-            <h5>Triez vos sélections :</h5>
+          <div class="conteneur-tri">
+            <h5 id="tri-toggle">Triez vos sélections :</h5>
+            <div id="tri-content" class="tri-content">
                 <div class="div-price">
                     <label for="price">Prix</label>
-                    <input type="range" name="price" id="price" min="0" max="2000">
+                    <input type="range" name="price" id="price" min="0" max="100">
                 </div>
                 <div class="div-color">
-                    <div>Couleur:</div>
+                    <div>Couleur :</div>
+                    <div class="checkbox">
                     <label for="bleu">bleu</label>
                     <input type="checkbox" name="bleu" id="bleu">
                     <label for="rouge">rouge</label>
@@ -48,9 +53,10 @@ include_once("components/navbar.php");
                     <input type="checkbox" name="jaune" id="jaune">
                     <label for="noir">noir</label>
                     <input type="checkbox" name="noir" id="noir">
-
+                    </div>
                 </div>
             </div>
+          </div>
         </div>
 
         <div class="article-container">
@@ -73,6 +79,16 @@ include_once("components/navbar.php");
         </div>
     </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const triToggle = document.getElementById("tri-toggle");
+        const triContent = document.getElementById("tri-content");
+
+        triToggle.addEventListener("click", function() {
+            triContent.classList.toggle("show");
+        });
+    });
+</script>
 <?php
 include_once("components/footer.php");
 ?>

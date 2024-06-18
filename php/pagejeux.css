@@ -12,13 +12,71 @@ section #accueil:hover{
     margin-top: 50px;
 }
 
+.tri-content {
+    display:flex;
+}
+
+#tri-content .div-color {
+    margin-left: 0;
+}
+
+@media only screen and (max-width: 845px){
+    .intro-container {
+        display:flex;
+        flex-direction: column;
+    }
+
+   .image-intro #img-intro{
+        width: 80%;
+        height: unset;
+        object-fit: cover;
+    }
+
+    .image-intro {
+        max-width: 100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 909px){
+    .tri-content {
+        display: none;
+        flex-direction: column;
+    }
+    
+    #tri-toggle {
+        cursor: pointer; 
+    }
+
+    .tri-content.show {
+        display: flex; 
+    }
+
+    .tri-content .div-color {
+        margin-left:0;
+    }
+
+    .conteneur-tri {
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
 .container-img {
     width: 100%;
     height: 100%;
 }
 
 .image-intro {
-    /* border: 2px solid #ff0000; */
     max-width: 100%;
     max-height: 300px;
 }
@@ -33,44 +91,43 @@ section #accueil:hover{
     padding-top: 25px;
 }
 
-.sort-container {
-    margin-right: 20%;
-    margin-left: -25%;
-}
-
 h5 {
-    margin-top: 15%;
-    text-align:center;
-}
-.conteneur-tri{
-    border: solid 0px rgba(128, 128, 128, 0.5);
-    box-shadow: 1px 2px 10px 1px rgba(128, 128, 128, 0.5);
-    border-radius: 10px;
-    height: 40vh;
     display:flex;
-    flex-direction: column;
-    width:100%
-}
-
-.div-price {
-    margin-top:15%;
-    margin-left: 15%;
-}
-
-.div-color {
-    margin-top: 10%;
-    display:flex;
-    flex-wrap: wrap;
-    margin-left:15%;
-}
-
-.checkbox {
+    align-items: center;
     width: 200px;
 }
 
+.sort-container{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+.conteneur-tri{
+    height: 40vh;
+    display:flex;
+    width:100%;
+    height: 5vh;
+    margin-bottom: 50px;
+    justify-content:center;
+}
+
+.div-price {
+    display:flex;
+    align-items:center;
+    width: 220px;
+    justify-content: space-evenly;
+}
+
+.div-color {
+    margin-left:10%;
+    width: 400px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
 .main-container{
-    display: grid;
-    grid-template-columns: 15% 85%;
     padding-top: 100px;
     margin-bottom: 100px;
 }
@@ -103,7 +160,7 @@ article a{
 }
 article button {
     color: white;
-    background-color:  #8795de;
+    background-color:  hsl(230, 57%, 70%);
     border: none;
     padding: 10px;
     border-radius: 8px;

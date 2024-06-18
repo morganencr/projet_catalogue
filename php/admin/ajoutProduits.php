@@ -1,5 +1,4 @@
 <?php
-
 if(!empty($_POST))
 {
 // si $_POST N'est pas vide, on vérifie que toutes les données sont présentes
@@ -42,7 +41,6 @@ if(!empty($_POST))
             // uniqid est un TIMESTAMP et md5 permet de le chiffré histoire d'avoir un string aléatoire
             $newname=md5(uniqid());
             // on génère le chemin complet vers le fichier:
-            
             $newfilename = "uploads/$newname.$imageExtension";
             if(!move_uploaded_file($_FILES["image"]["tmp_name"], $newfilename)){
                 die("l'upload a échoué");
@@ -81,12 +79,12 @@ if(!empty($_POST))
             }
         }
 ?>
- <?php
+<?php
  include_once("navbar2.php");
- if (!isAdmin()) {
+ if(!isAdmin()) {
     header("Location: ../index.php");
     exit;
-}
+ }
  ?>
 <h1>AJOUTER UN PRODUIT</h1>
  <!-- a partir du moment où on a un type file dans un formulaire il faut mettre un attribut spécifique "enctype" sur la balise form pour pouvoir envoyer les fichiers -->
@@ -113,7 +111,7 @@ if(!empty($_POST))
             <option value="catégorie">Sélectionner une catégorie</option>
             <option value="Jeux de société">Jeux de société</option>
             <option value="Activité créative">Activité créative</option>
-            <option value="Jeu d'éveil">Jeu d'éveil</option>
+            <option value="Jeux d'éveil">Jeux d'éveil</option>
             <option value="Jeu en bois">Jeu en bois</option>
             <option value="Jeu de construction">Jeu de construction</option>
             <option value="Jeux d'extérieur">Jeux d'extérieur</option>
