@@ -33,7 +33,9 @@ include_once("components/navbar.php");
 
     <div class="main-container">
         <div class="sort-container">
-            <div class="conteneur-tri">
+          <div class="conteneur-tri">
+            <h5 id="tri-toggle">Triez vos sélections :</h5>
+            <div id="tri-content" class="tri-content">
                 <div class="div-price">
                     <label for="price">Prix</label>
                     <input type="range" name="price" id="price" min="0" max="100">
@@ -54,6 +56,7 @@ include_once("components/navbar.php");
                     </div>
                 </div>
             </div>
+          </div>
         </div>
 
         <div class="article-container">
@@ -75,6 +78,16 @@ include_once("components/navbar.php");
         </div>
     </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const triToggle = document.getElementById("tri-toggle");
+        const triContent = document.getElementById("tri-content");
+
+        triToggle.addEventListener("click", function() {
+            triContent.classList.toggle("show");
+        });
+    });
+</script>
 <?php
 include_once("components/footer.php");
 ?>

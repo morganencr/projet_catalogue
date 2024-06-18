@@ -60,7 +60,7 @@ $produits = $query->fetchAll(PDO::FETCH_ASSOC);
   </button>
 </div>
   <div id="nav-icones">
-    <ul>
+    <ul class="carousel">
       <li><i class="fa-regular fa-credit-card fa-2x"></i>&nbsp;Paiement 100% sécurisé</li>
       <li><i class="fa-solid fa-shop fa-2x"></i>Retrait en magasin gratuit</li>
       <li><i class="kdo fa-solid fa-gift fa-2x"></i>Emballage cadeau gratuit</li>

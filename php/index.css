@@ -177,7 +177,7 @@ button .fa-solid:hover {
     transition: all 0.5s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 845px) {
 
     .burger-menu {
         display: flex;
@@ -279,16 +279,73 @@ section {
     padding-bottom: 5px;
 }
 
+#nav-icones .fa-regular {
+    width: 27px;
+}
+
 #nav-icones .fa-solid {
-    width:32px;
+    width:33px;
 }
 
 #nav-icones .fa-2x {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 #nav-icones .kdo {
-    width:27px;
+    width:29px;
+}
+
+@media only screen and (max-width: 715px) {
+    #nav-icones {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #nav-icones ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        height: 2.5em; 
+    }
+    
+    #nav-icones li {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    @keyframes slide {
+        0%, 33.33%, 100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        10%, 23.33% {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    #nav-icones li:nth-child(1) {
+        animation: slide 9s infinite;
+        animation-delay: 0s;
+    }
+    #nav-icones li:nth-child(2) {
+        animation: slide 9s infinite;
+        animation-delay: 3s;
+    }
+    #nav-icones li:nth-child(3) {
+        animation: slide 9s infinite;
+        animation-delay: 6s;
+    }
 }
 
 .container-promos h1{
@@ -305,7 +362,20 @@ section {
 #photos-promo img{
     flex: 1 0 20%;
     max-width: 500px;
+
 }
+
+@media only screen and (max-width: 515px) {
+    #photos-promo img{
+        max-width:450px;
+    }
+}
+
+#photos-promo img:hover{
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+}
+
 #btn-offre{
     display:flex;
     justify-content: center;
