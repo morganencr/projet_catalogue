@@ -17,7 +17,7 @@ include_once("components/navbar.php");
 <link rel="stylesheet" href="pagejeux.css">
 
 <section id="section">
-    <a href="index.php">Accueil</a>
+    <a id="accueil" href="index.php">Accueil</a>
     <div class="intro-container">
         <div class="texte-description">
         <h2>JEUX D'ÉVEIL</h2>
