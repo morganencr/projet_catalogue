@@ -110,10 +110,12 @@ if(!empty($_POST))
         <select name="categorie" id="categorie">
             <option value="catégorie">Sélectionner une catégorie</option>
             <option value="Jeux de société">Jeux de société</option>
+            <option value="Jeux de société">Jeux de société</option>
             <option value="Activité créative">Activité créative</option>
             <option value="Jeux d'éveil">Jeux d'éveil</option>
             <option value="Jeu en bois">Jeu en bois</option>
             <option value="Jeu de construction">Jeu de construction</option>
+            <option value="Jeux d'extérieur">Jeux d'extérieur</option>
             <option value="Jeux d'extérieur">Jeux d'extérieur</option>
         </select>
     </div>
