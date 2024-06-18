@@ -56,8 +56,13 @@ include_once("components/navbar.php");
                 <h1><?=strip_tags($produit["nom"])?></h1> 
                 <p><?=strip_tags($produit["prix"])?>€</p>
                 <div class="options">
-                <button>Retrait en magasin</button>
-                <button>Ajouter au panier</button>
+                <form method="POST" action="panier.php">
+                        <input type="hidden" name="product_id" value="<?= $produit['id'] ?>">
+                        <input type="hidden" name="product_name" value="<?= htmlspecialchars($produit['nom']) ?>">
+                        <input type="hidden" name="product_price" value="<?= htmlspecialchars($produit['prix']) ?>">
+                        <button>Retrait en magasin</button>
+                        <button type="submit" name="add_to_cart">Ajouter au panier</button>
+                    </form>
                 </div>
                 <p class="stock">Il nous en reste <?=strip_tags($produit["stock"])?>  en magasin.</p>
                 

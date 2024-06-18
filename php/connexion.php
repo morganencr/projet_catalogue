@@ -51,6 +51,7 @@ if(!empty($_POST)){
         $_SESSION["user"]= [
             "id" =>  $user["id"],
             "prenom" => $user['firstname'],
+            "name" => $user['name'],
             "email" => $user['email'],
             "role" => $user["role"]
         ];

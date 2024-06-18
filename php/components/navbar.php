@@ -39,7 +39,7 @@ function isAdmin() {
                 <?php else : ?>
                 <a href="déconnexion.php"><i id = "connexion" class="fa-solid fa-right-from-bracket fa-2x"></i></a>
                 <?php endif; ?>
-                <a href="#"><i id="panier" class="fa-solid fa-cart-shopping fa-2x"></i></a>
+                <a href="panier.php"><i id="panier" class="fa-solid fa-cart-shopping fa-2x"></i></a>
             </div>
             <div class="burger-menu" id="burger-menu">☰</div>
         </div>
