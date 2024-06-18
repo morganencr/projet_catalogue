@@ -115,7 +115,7 @@ if(!empty($_POST))
         <label for="categorie">Catégorie du produit</label>
         <select name="categorie" id="categorie">
             <option value="catégorie">Sélectionner une catégorie</option>
-            <option value="Jeux de société">Jeux de société</option>
+            <option value="Jeu de société">Jeux de société</option>
             <option value="Activité créative">Activité créative</option>
             <option value="Jeu d'éveil">Jeu d'éveil</option>
             <option value="Jeu en bois">Jeu en bois</option>
