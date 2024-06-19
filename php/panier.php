@@ -22,14 +22,13 @@ if (isset($_POST['add_to_cart'])) {
         $query->execute();
         $panier = $query->fetch();
 
-        if ($panier) {
+        if($panier) {
             // Mettre à jour la quantité
             $sql = "UPDATE panier SET quantity = quantity + :quantity WHERE user_name = :user_name AND user_id = :user_id AND product_name = :product_name";
         } else {
             // Insérer un nouvel enregistrement
             $sql = "INSERT INTO panier (user_id, user_name, product_name, quantity) VALUES (:user_id, :user_name, :product_name, :quantity)";
         }
-
         $query = $db->prepare($sql);
         $query->bindValue(":user_name", $user_name, PDO::PARAM_STR);
         $query->bindValue(":user_id", $user_id, PDO::PARAM_INT);
@@ -96,7 +95,7 @@ if (isset($_POST['add_to_cart'])) {
                 // p.nom : Sélectionne la colonne nom (nom) dans la table produits.
                 // p.prix : Sélectionne la colonne prix (prix) dans la table produits.
                 // pan.quantity : Sélectionne la colonne quantity (quantité) dans la table panier.
-                $sql = "SELECT p.nom, p.prix, pan.quantity, p.id
+                $sql = "SELECT p.nom, p.prix, pan.quantity, pan.id AS panier_id
                         FROM produits p 
                         JOIN panier pan ON p.nom = pan.product_name
                         WHERE pan.user_id = :user_id AND pan.user_name = :user_name";
@@ -116,7 +115,7 @@ if (isset($_POST['add_to_cart'])) {
                         <td><?=$item['prix']?>€</td>
                         <td><?=$item['quantity']?></td>
                         <td><?=$item_total?>€</td>
-                        <td><a href="deletepanier.php?id=<?=$item['id']?>"><i class="fa-solid fa-trash"></i></a></td>
+                        <td><a href="deletepanier.php?id=<?=$item['panier_id']?>"><i class="fa-solid fa-trash"></i></a></td>
                         
                     </tr>
                           <?php 
