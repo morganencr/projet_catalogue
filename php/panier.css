@@ -1,0 +1,30 @@
+h1 {
+    display:flex;
+    justify-content: center;
+}
+
+table #produit {
+    width:160px;
+}
+
+table #prix {
+    width: 60px;
+}
+
+table #quantite {
+    width:90px;
+}
+
+table {
+    font-size: 1.2em;
+    margin-top: 50px;
+}
+
+.panier h2 {
+    margin-top: 20px;
+}
+
+.panier {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

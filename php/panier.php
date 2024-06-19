@@ -72,14 +72,14 @@ if (isset($_POST['add_to_cart'])) {
 <?php include_once("components/navbar.php"); ?>
 
 <section class="panier">
-    <h1>Votre Panier</h1>
+    <h1>Votre panier</h1>
     <table>
         <thead>
             <tr>
-                <th>Produit</th>
-                <th>Prix</th>
-                <th>Quantité</th>
-                <th>Total</th>
+                <th id="produit">Produit</th>
+                <th id="prix">Prix</th>
+                <th id="quantite">Quantité</th>
+                <th id="total">Total</th>
             </tr>
         </thead>
         <tbody>

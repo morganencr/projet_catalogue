@@ -16,9 +16,20 @@ if (!isAdmin()) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau des produits</title>
+    <link rel="stylesheet" href="tableauProduits.css">
+</head>
+<body>
 <h1>Tableau des produits</h1>
-<a href="ajoutProduits.php" >Ajouter un produit</a>
-<table>
+<div id="btn_ajout">
+<a href="ajoutProduits.php" class="btn">Ajouter un produit</a>
+</div>
+<table class="product-table">
 <thead>
         <td>id</td>
         <td>nom du produit</td>
@@ -44,8 +55,8 @@ if (!isAdmin()) {
             <td><?=$produit["stock"]?></td>
             <td><?=$produit["promo"]?></td>
             <td>
-                <a href="update.php?id=<?= $produit['id']?>">Modifier</a>
-                <a href="delete.php?id=<?= $produit['id']?>"><i class="fa-solid fa-trash-can"></i></a>
+                <a href="update.php?id=<?= $produit['id']?>" class="btn">Modifier</a>
+                <a href="delete.php?id=<?= $produit['id']?>" class="btn_delete"><i class="delete-icone fa-solid fa-trash-can"></i></a>
             </td>
         </tr>
         <?php
@@ -54,4 +65,6 @@ if (!isAdmin()) {
 </tbody>
 </table>
 <?php
-include_once("../components/footer.php");
+include_once("../components/footer.php"); ?>
+</body>
+</html>
