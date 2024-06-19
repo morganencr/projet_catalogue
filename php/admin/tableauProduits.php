@@ -10,10 +10,7 @@ $query = $db->prepare($sql);
 $query->execute();
 $produits = $query-> fetchAll(PDO::FETCH_ASSOC);
 include_once("navbar2.php");
-if (!isAdmin()) {
-    header("Location: ../index.php");
-    exit;
-}
+
 ?>
 
 <h1>Tableau des produits</h1>

@@ -68,7 +68,12 @@ include_once("components/navbar.php");
                         <img id="img-article" src="<?= htmlspecialchars($class)?>" alt="photo article">
                         <h3><?=strip_tags($produit["nom"])?></h3>
                         <p><?=strip_tags($produit["prix"])?>€</p>
-                        <button>Ajouter au panier</button>
+                        <form method="POST" action="panier.php">
+                            <input type="hidden" name="product_id" value="<?= $produit['id'] ?>">
+                            <input type="hidden" name="product_name" value="<?= htmlspecialchars($produit['nom']) ?>">
+                            <input type="hidden" name="product_price" value="<?= htmlspecialchars($produit['prix']) ?>">
+                            <button type="submit" name="add_to_cart">Ajouter au panier</button>
+                        </form>
                     </a></article>
                 <?php endforeach;?>
             </section>

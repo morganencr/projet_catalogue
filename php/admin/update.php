@@ -1,9 +1,6 @@
 <?php
  include_once("navbar2.php");
- if (!isAdmin()) {
-    header("Location: ../index.php");
-    exit;
-}
+
 if(!empty($_POST))
 {
 // si $_POST N'est pas vide, on vérifie que toutes les données sont présentes

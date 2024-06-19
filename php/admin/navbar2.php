@@ -5,6 +5,10 @@ if (session_status() == PHP_SESSION_NONE) {
 function isAdmin() {
     return isset($_SESSION["user"]) && $_SESSION["user"]["role"] === 'admin';
 }
+if (!isAdmin()) {
+    header("Location: ../index.php");
+    exit;
+}
 
 ?>
 
