@@ -96,7 +96,7 @@ if(!empty($_POST))
 <body>
 <h1>Ajouter un produit</h1>
  <!-- a partir du moment où on a un type file dans un formulaire il faut mettre un attribut spécifique "enctype" sur la balise form pour pouvoir envoyer les fichiers -->
-<form action="" method="post" enctype="multipart/form-data">
+<form id="form-add" action="" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="nom">Nom du produit</label>
         <input type="text" name="nom" id="nom" >

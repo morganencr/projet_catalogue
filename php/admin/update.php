@@ -116,7 +116,7 @@ if(!empty($_POST))
 <body>
 <h1>Modifier un produit</h1>
  <!-- a partir du moment où on a un type file dans un formulaire il faut mettre un attribut spécifique "enctype" sur la balise form pour pouvoir envoyer les fichiers -->
-<form method="post" enctype="multipart/form-data">
+<form id="form-add" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <input type="hidden" name="id" value="<?=$produits["id"]?>">
         <!-- Le véritable jeu du Nain Jaune dans une mallette aménagée en table de jeu qui permet de jouer partout ! Nouvelle version. -->
