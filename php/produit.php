@@ -62,7 +62,7 @@ include_once("components/navbar.php");
                         <input type="hidden" name="product_price" value="<?= htmlspecialchars($produit['prix']) ?>">
                         <button>Retrait en magasin</button>
                         <button type="submit" name="add_to_cart">Ajouter au panier</button>
-                    </form>
+                </form>
                 </div>
                 <p class="stock">Il nous en reste <?=strip_tags($produit["stock"])?>  en magasin.</p>
                 
@@ -75,13 +75,13 @@ include_once("components/navbar.php");
     </div>
     
 </section>
-<div class="list">
-  <ul>
-    <li><i class="fa-regular fa-credit-card"></i>Paiement 100% sécurisé</li>
-    <li><i class="fa-solid fa-shop"></i>Retrait en magasin gratuit</li>
-    <li><i class="kdo fa-solid fa-gift"></i>Emballage cadeau gratuit</li>
-  </ul>
-</div>
+<div id="nav-icones">
+    <ul class="carousel">
+      <li><i class="fa-regular fa-credit-card fa-2x"></i>&nbsp;Paiement 100% sécurisé</li>
+      <li><i class="fa-solid fa-shop fa-2x"></i>Retrait en magasin gratuit</li>
+      <li><i class="kdo fa-solid fa-gift fa-2x"></i>Emballage cadeau gratuit</li>
+    </ul>
+  </div>
 <?php
 // on inclut le footer 
 include_once("components/footer.php");

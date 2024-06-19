@@ -26,7 +26,7 @@ include_once("components/navbar.php");
             Ne manquez pas ces opportunités uniques !</p>
         </div>
         <div class="image-intro">
-            <img id="img-intro"src="components/img/promo3.png">
+            <img id="img-intro"src="components/img/intropromo.jpeg">
         </div>
         
     </div>
