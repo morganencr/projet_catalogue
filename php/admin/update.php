@@ -105,28 +105,37 @@ if(!empty($_POST))
         
 ?>
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un produit</title>
+    <link rel="stylesheet" href="addupdate.css">
+</head>
+<body>
 <h1>Modifier un produit</h1>
  <!-- a partir du moment où on a un type file dans un formulaire il faut mettre un attribut spécifique "enctype" sur la balise form pour pouvoir envoyer les fichiers -->
 <form method="post" enctype="multipart/form-data">
-    <div>
+    <div class="form-group">
         <input type="hidden" name="id" value="<?=$produits["id"]?>">
         <!-- Le véritable jeu du Nain Jaune dans une mallette aménagée en table de jeu qui permet de jouer partout ! Nouvelle version. -->
         <label for="nom">Nom du produit</label>
         <input type="text" name="nom" id="nom" value="<?=$produits["nom"]?>">
     </div>
-    <div>
+    <div class="form-group">
         <label for="description">Descritpion du produit</label>
         <textarea name="description" id="description" value="<?=$produits["description"]?>"></textarea>
     </div>
-    <div>
+    <div class="form-group">
         <label for="image">Image du produit</label>
         <input type="file" name="image" id="image" value="<?=$produits["image"]?>"required>
     </div>
-    <div>
+    <div class="form-group">
         <label for="prix">Prix du produit</label>
         <input type="text" name="prix" id="prix" value="<?=$produits["prix"]?>"required>
     </div>
-    <div>
+    <div class="form-group">
         <label for="categorie">Catégorie du produit</label>
         <select name="categorie" id="categorie" value="<?=$produits["categorie"]?>">
             <option value="catégorie">Sélectionner une catégorie</option>
@@ -138,11 +147,11 @@ if(!empty($_POST))
             <option value="Jeux d'extérieur">Jeux d'extérieurs</option>
         </select>
     </div>
-    <div>
+    <div class="form-group">
         <label for="stock">Stock du produit</label>
         <input type="number" name="stock" id="stock" min="0" value="<?=$produits["stock"]?>"required>
     </div>
-    <div>
+    <div class="form-group">
         <label for="promo">promo</label>
         <select name="promo" id="promo" value="<?=$produits["promo"]?>">
             <option value="promo">Sélectionner</option>
@@ -150,9 +159,12 @@ if(!empty($_POST))
             <option value="Non">Non</option>
         </select>
     </div>
-    <button type="submit">Envoyer</button>
+    <div id="btn">
+    <button type="submit" class="btn">Envoyer</button>
+    </div>
     </form>
     <?php
-    include_once("../components/footer.php");
-  
+    include_once("../components/footer.php"); ?>
+    </body>
+    </html>
  

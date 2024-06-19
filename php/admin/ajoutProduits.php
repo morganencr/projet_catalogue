@@ -84,28 +84,38 @@ if(!empty($_POST))
  include_once("navbar2.php");
 
  ?>
-<h1>AJOUTER UN PRODUIT</h1>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un produit</title>
+    <link rel="stylesheet" href="addupdate.css">
+</head>
+<body>
+<h1>Ajouter un produit</h1>
  <!-- a partir du moment où on a un type file dans un formulaire il faut mettre un attribut spécifique "enctype" sur la balise form pour pouvoir envoyer les fichiers -->
 <form action="" method="post" enctype="multipart/form-data">
-    <div>
+    <div class="form-group">
         <label for="nom">Nom du produit</label>
         <input type="text" name="nom" id="nom" >
     </div>
-    <div>
+    <div class="form-group">
         <label for="description">Descritpion du produit</label>
         <textarea name="description" id="description"></textarea>
     </div>
-    <div>
+    <div class="form-group">
         <label for="image">Image du produit</label>
         <input type="file" name="image" id="image" required>
     </div>
-    <div>
+    <div class="form-group">
         <label for="prix">Prix du produit</label>
         <input type="text" name="prix" id="prix" required>
     </div>
-    <div>
+    <div class="form-group">
         <label for="categorie">Catégorie du produit</label>
-        <select name="categorie" id="categorie">
+        <select name="categorie" id="categorie" required>
             <option value="catégorie">Sélectionner une catégorie</option>
             <option value="Jeux de société">Jeux de société</option>
             <option value="Activité créative">Activité créative</option>
@@ -115,20 +125,24 @@ if(!empty($_POST))
             <option value="Jeux d'extérieur">Jeux d'extérieur</option>
         </select>
     </div>
-    <div>
+    <div class="form-group">
         <label for="stock">Stock du produit</label>
         <input type="number" name="stock" id="stock" min="0" required>
     </div>
-    <div>
+    <div class="form-group">
         <label for="promo">promo</label>
-        <select name="promo" id="promo">
+        <select name="promo" id="promo" required>
             <option value="promo">Sélectionner</option>
             <option value="Oui">Oui</option>
             <option value="Non">Non</option>
         </select>
     </div>
-    <button type="submit">Envoyer</button>
+    <div id="btn">
+    <button type="submit" class="btn">Envoyer</button>
+    </div>
 </form>
 
 <?php
-include_once("../components/footer.php");
+include_once("../components/footer.php"); ?>
+</body>
+</html>
