@@ -95,7 +95,7 @@ if (isset($_POST['add_to_cart'])) {
                 // p.nom : Sélectionne la colonne nom (nom) dans la table produits.
                 // p.prix : Sélectionne la colonne prix (prix) dans la table produits.
                 // pan.quantity : Sélectionne la colonne quantity (quantité) dans la table panier.
-                $sql = "SELECT p.nom, p.prix, pan.quantity, pan.id AS panier_id
+                $sql = "SELECT p.nom, p.prix, pan.quantity, p.id, pan.id AS panier_id
                         FROM produits p 
                         JOIN panier pan ON p.nom = pan.product_name
                         WHERE pan.user_id = :user_id AND pan.user_name = :user_name";
@@ -111,7 +111,7 @@ if (isset($_POST['add_to_cart'])) {
                     $item_total = $item['prix'] * $item['quantity'];
                     $total += $item_total; ?>
                     <tr>
-                        <td><?=$item['nom']?></td>
+                        <td><a href="produit.php?id=<?=$item['id']?>"><?=$item['nom']?></a></td>
                         <td><?=$item['prix']?>€</td>
                         <td><?=$item['quantity']?></td>
                         <td><?=$item_total?>€</td>
@@ -128,7 +128,7 @@ if (isset($_POST['add_to_cart'])) {
                         $item_total = $item['price'] * $item['quantity'];
                         $total += $item_total; ?>
                             <tr>
-                                <td><?=$item['name']?></td>
+                                <td><a href="produit.php?id=<?=$item['id']?>"><?=$item['name']?></a></td>
                                 <td><?=$item['price']?>€</td>
                                 <td><?=$item['quantity']?></td>
                                 <td><?=$item_total?>€</td>

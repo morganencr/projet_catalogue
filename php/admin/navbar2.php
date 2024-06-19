@@ -48,9 +48,9 @@ if (!isAdmin()) {
         <div class="burger-menu" id="burger-menu">☰
         </div>
         </div>
-        <form action="" method="get">
+        <form action="../searchResult.php" method="get">
         <div id="searchbar">
-        <input type="search" placeholder="Recherchez un produit" id="searchbar">
+        <input type="search" placeholder="Recherchez un produit" id="searchbar" name="searchbar">
         <button><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
         </div>
     </form>

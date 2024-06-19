@@ -22,7 +22,7 @@ if (isset($_GET['id'])) {
     // Suppression du produit du panier de la session (utilisateur non connecté)
     if (isset($_SESSION['cart'])) {
         foreach ($_SESSION['cart'] as $key => $item) {
-            if ($item['id'] == $product_id) {
+            if ($item['id'] == $panier_id) {
                 unset($_SESSION['cart'][$key]);
                 break;
             }

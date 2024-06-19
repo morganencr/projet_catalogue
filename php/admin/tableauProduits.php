@@ -47,7 +47,7 @@ include_once("navbar2.php");
             <td><?=$produit["nom"]?></td>
             <td><?=$produit["description"]?></td>
             <td><?=$produit["image"]?></td>
-            <td><?=$produit["prix"]?></td>
+            <td><?=$produit["prix"]?>€</td>
             <td><?=$produit["categorie"]?></td>
             <td><?=$produit["stock"]?></td>
             <td><?=$produit["promo"]?></td>

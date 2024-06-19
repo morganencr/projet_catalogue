@@ -80,7 +80,6 @@ include_once("components/navbar.php");
                 <?php endforeach;?>
             </section>
         </div>
-    </div>
 </section>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
