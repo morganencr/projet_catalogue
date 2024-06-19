@@ -89,9 +89,30 @@ include_once("components/navbar.php");
         const triToggle = document.getElementById("tri-toggle");
         const triContent = document.getElementById("tri-content");
 
+        function updateTriToggleText() {
+            if (window.innerWidth < 909) {
+                if (triContent.classList.contains("show")) {
+                    triToggle.innerHTML = 'Triez vos sélections -';
+                } else {
+                    triToggle.innerHTML = 'Triez vos sélections +';
+                }
+            } else {
+                if (triContent.classList.contains("show")) {
+                    triToggle.innerHTML = 'Triez vos sélections -';
+                } else {
+                    triToggle.innerHTML = 'Triez vos sélections :';
+                }
+            }
+        }
+
         triToggle.addEventListener("click", function() {
             triContent.classList.toggle("show");
+            updateTriToggleText();
         });
+
+        window.addEventListener("resize", updateTriToggleText);
+
+        updateTriToggleText();
     });
 </script>
 <?php
