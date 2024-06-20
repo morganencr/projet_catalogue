@@ -1,8 +1,8 @@
 <?php
 session_start();
 $_SESSION["error"] = [];
-// Si on est connecté on ne veut pas voir inscription puisqu'on est déja connecté donc on va rediriger vers la page de profil
-// on FAIT LA MEME CHOSE SUR LA PAGE connexion.php
+
+
 // if(isset($_SESSION["user"])){
 //     header("Location: index.php");
 //     exit;
