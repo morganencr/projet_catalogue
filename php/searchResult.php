@@ -7,6 +7,8 @@ if(isset($_GET['searchbar'])){
     $searchQuery = htmlspecialchars($_GET['searchbar']);
 
     $sql = "SELECT * FROM produits WHERE nom LIKE :searchQuery";
+    // LIKE : C'est un opérateur SQL utilisé pour rechercher une chaîne de caractères dans une colonne qui correspond à un certain modèle.
+    //:searchQuery permet de remplacer par une valeur spécifique (fourni par l'utilisateur) au moment de l'exécution de la requête.
     $query = $db->prepare($sql);
     $query->bindValue(':searchQuery', '%'.$searchQuery.'%', PDO::PARAM_STR);
     $query->execute();

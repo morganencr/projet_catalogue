@@ -23,8 +23,9 @@ if (isset($_POST['add_to_cart'])) {
         $panier = $query->fetch();
 
         if($panier) {
-            // Mettre à jour la quantité
+            // Si le produit est déjà dans le panier, met à jour la quantité:
             $sql = "UPDATE panier SET quantity = quantity + :quantity WHERE user_name = :user_name AND user_id = :user_id AND product_name = :product_name";
+            // Sinon, insère un nouvel enregistrement dans la table panier
         } else {
             // Insérer un nouvel enregistrement
             $sql = "INSERT INTO panier (user_id, user_name, product_name, quantity) VALUES (:user_id, :user_name, :product_name, :quantity)";
@@ -40,19 +41,26 @@ if (isset($_POST['add_to_cart'])) {
         // Utilisateur non connecté, gérer avec les sessions
         if (!isset($_SESSION['cart'])) {
             $_SESSION['cart'] = [];
+            // cela vérifie si la variable de session cart n'est pas encore définie (ce qui signifie que l'utilisateur n'a pas encore de panier en cours)
         }
 
         $is_found = false;
+        // Cette variable est utilisée pour indiquer si le produit que l'utilisateur souhaite ajouter au panier a été trouvé dans le panier existant ($_SESSION['cart']).
         foreach ($_SESSION['cart'] as &$item) {
             if ($item['id'] == $product_id) {
+             // À chaque itération de la boucle, cette condition vérifie si l'ID du produit que l'utilisateur souhaite ajouter ($product_id) correspond à l'ID d'un produit déjà présent dans le panier ($item['id']).
                 $item['quantity'] += 1;
+                // Dans ce cas, on incrémente la quantité de ce produit dans le panier ($item['quantity'] += 1;), car l'utilisateur souhaite en ajouter un de plus.
                 $is_found = true;
+                // On met également $is_found à true pour indiquer que le produit a été trouvé dans le panier.
                 break;
             }
         }
 
         if (!$is_found) {
+        // Après la boucle foreach, on vérifie si $is_found est toujours false. Cela signifie que le produit n'était pas déjà présent dans le panier.
             $_SESSION['cart'][] = [
+            // Dans ce cas, on ajoute le produit au tableau $_SESSION['cart'].
                 'id' => $product_id,
                 'name' => $product_name,
                 'price' => $product_price,
@@ -89,7 +97,7 @@ if (isset($_POST['add_to_cart'])) {
             $total = 0;
 
             if (isset($_SESSION['user']['id'])) {
-                // Si l'utilisateur est connecté, récupérer le panier de la base de données
+                // Si l'utilisateur est connecté, récupérer le panier de la base de données sinon plus bas on récupère les données se la session PHP
                 $user_id = $_SESSION['user']['id'];
                 $user_name = $_SESSION['user']['firstname'];
                 // p.nom : Sélectionne la colonne nom (nom) dans la table produits.
@@ -107,6 +115,7 @@ if (isset($_POST['add_to_cart'])) {
                 $panier = $query->fetchAll();
 
                 // Afficher les produits du panier de la base de données
+                //reprend les colonnes de la TABLE produits puisque que la requête est from produits
                 foreach ($panier as $item) {
                     $item_total = $item['prix'] * $item['quantity'];
                     $total += $item_total; ?>
@@ -123,6 +132,7 @@ if (isset($_POST['add_to_cart'])) {
                 }
             } else {
                 // Si l'utilisateur n'est pas connecté, récupérer le panier de la session
+                //reprend les données de la session cart réalisé plus haut
                 if (isset($_SESSION['cart'])) {
                     foreach ($_SESSION['cart'] as $item) {
                         $item_total = $item['price'] * $item['quantity'];
