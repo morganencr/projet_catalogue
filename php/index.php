@@ -43,7 +43,7 @@ $produits = $query->fetchAll(PDO::FETCH_ASSOC);
       <img src="components/img/jeuxboisbaniere.jpg" height="500px" class="d-block w-100" alt="Description of Image 3">
       <div class="container">
         <div class="carousel-caption text-end">
-          <h1>Éveillez leurs sens avec nos jeux d'éveils en bois</h1>
+          <h1>Éveillez leurs sens avec nos jeux d'éveil en bois</h1>
           <p>Consultez notre jeu favori</p>
           <p><a class="btn btn-lg btn-primary" href="#">En savoir plus</a></p>
         </div>

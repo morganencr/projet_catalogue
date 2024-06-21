@@ -57,7 +57,7 @@ if (!isAdmin()) {
     <ul class="categories"id="categories">
         <li><a href="../jeuxdesociete.php">Jeux de société</a></li>
         <li><a href="../activites-creatives.php">Activités créatives</a></li>
-        <li><a href="../jeuxeveils.php">Jeux d'éveils</a></li>
+        <li><a href="../jeuxeveils.php">Jeux d'éveil</a></li>
         <li><a href="../jeuxbois.php">Jeux en bois</a></li>
         <li><a href="../jeuxconstruction.php">Jeux de construction</a></li>
         <li><a href="../jeuxexterieur.php">Jeux d'extérieurs</a></li>
